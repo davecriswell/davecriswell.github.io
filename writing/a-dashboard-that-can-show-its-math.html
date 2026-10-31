@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A dashboard that can show its math · Dave Criswell</title>
+  <meta name="description" content="Why I rebuilt a registration dashboard that looked finished but couldn't explain its own numbers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-name">Dave Criswell</span>
+      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#ai">AI in operations</a>
+      <a href="../index.html#writing">Writing</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="article">
+    <a class="back" href="../index.html#writing">&larr; All writing</a>
+    <span class="label" style="margin-top:24px">Reporting<span class="draft-tag">Draft</span></span>
+    <h1>A dashboard that can show its math</h1>
+
+    <p class="draft-note">This is a first draft written from my notes, as a starting point. I&rsquo;ll rewrite it in my own words before it goes live.</p>
+
+    <p>Every season, a youth soccer club asks the same question in a dozen different ways: <em>are we ahead of last year or behind?</em> Registration doesn&rsquo;t arrive evenly. It comes in waves around deadlines, tryouts, and the first warm weekend of spring. So &ldquo;how many players do we have?&rdquo; isn&rsquo;t a useful number on its own. What you want is how many players you have compared with the same date last year, broken down by program, region, gender, and age group.</p>
+
+    <p>So I built a pacing dashboard. The first version came together quickly. It looked good, the charts moved, and people liked it.</p>
+
+    <p>Then someone asked a simple question about one of the numbers, and I couldn&rsquo;t answer it.</p>
+
+    <h2>What was wrong with the first version</h2>
+    <p>Nothing was dramatically broken. It had three quieter problems, and together they were worse:</p>
+    <ul>
+      <li><strong>It couldn&rsquo;t be edited.</strong> Changing how a program was categorized meant starting over.</li>
+      <li><strong>It didn&rsquo;t reconcile.</strong> When I added things up from the source export by hand, the totals didn&rsquo;t quite match the dashboard.</li>
+      <li><strong>It couldn&rsquo;t show its math.</strong> There was no way to follow a number back to the rows that produced it.</li>
+    </ul>
+    <p>A dashboard that can&rsquo;t explain itself asks people to trust it. The first time it&rsquo;s wrong and nobody can say why, they stop trusting it, and they go back to their own spreadsheets.</p>
+
+    <h2>What the rebuild does differently</h2>
+    <p>The new version is a self-contained page. You upload the latest roster export and it does the rest. Alongside it sits a plain spreadsheet model that does the same calculation step by step, so anyone can check the work.</p>
+    <p>It also archives each season when it closes. Before, refreshing the data quietly overwrote the history the comparison depended on. Now last year is still there next year.</p>
+
+    <h2>What I took from it</h2>
+    <p>The first version wasn&rsquo;t a mistake. It showed what people actually wanted to look at, which is a useful thing to learn early. But &ldquo;looks finished&rdquo; and &ldquo;is finished&rdquo; are different, and in reporting the difference is whether you can show your math.</p>
+    <p>Now I ask three questions before calling a report done: Can someone else change it? Does it tie back to the source? Can it explain any number it shows?</p>
+
+    <p><a class="back" href="../index.html#writing">&larr; Back to all writing</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Dave Criswell</span>
+    <span>Built with Claude Code</span>
+  </footer>
+
+</div>
+</body>
+</html>

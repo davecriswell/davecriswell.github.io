@@ -1,0 +1,348 @@
+/* ==========================================================
+   Dave Criswell — site styles
+   Colors and fonts are defined once here as "tokens".
+   Change a value in :root and it updates everywhere.
+   ========================================================== */
+
+:root {
+  --paper: #f7f5f0;        /* warm off-white page background */
+  --panel: #eceee7;        /* soft sage panel background */
+  --ink: #1f2420;          /* main text */
+  --ink-soft: #5c625c;     /* secondary text */
+  --ink-faint: #9a9d96;    /* the grey words in the intro */
+  --rule: #d6d6cd;         /* thin divider lines */
+  --accent: #2f4a3a;       /* deep pitch green */
+
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --width: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+}
+.skip:focus { left: 16px; top: 16px; background: var(--ink); color: var(--paper); padding: 8px 12px; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 0 22px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.brand { text-decoration: none; }
+.brand-name { display: block; font-weight: 600; font-size: 18px; color: var(--accent); }
+.brand-tag {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.site-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; }
+.site-nav a { text-decoration: none; }
+.site-nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- Intro (the big serif paragraph) ---------- */
+
+.intro { padding: 72px 0 40px; max-width: 900px; }
+
+.intro p {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  color: var(--ink-faint);
+  margin: 0 0 0.8em;
+}
+
+/* Words that "light up" in the intro */
+.intro strong { font-weight: 400; color: var(--ink); }
+.intro em { font-style: italic; color: var(--ink); }
+
+.jump { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 8px; font-size: 15px; }
+.jump a { text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+.jump a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ---------- Sections ---------- */
+
+.section { padding: 64px 0 8px; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  border-top: 1px solid var(--ink);
+  padding-top: 28px;
+  margin-bottom: 8px;
+}
+
+.section-head h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(34px, 4.5vw, 46px);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.section-note { color: var(--ink-soft); font-size: 15px; margin: 0; }
+
+.lede { max-width: 680px; color: var(--ink-soft); margin: 12px 0 24px; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  padding: 8px 32px 24px;
+}
+.panel .section-head { border-top: 0; }
+
+.label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------- Work list (expandable rows) ---------- */
+
+.work-list { list-style: none; margin: 0; padding: 0; }
+
+.work-list > li { border-top: 1px solid var(--rule); }
+.work-list > li:last-child { border-bottom: 1px solid var(--rule); }
+
+.work-list summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 24px;
+  gap: 8px 32px;
+  align-items: center;
+  padding: 22px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.work-list summary::-webkit-details-marker { display: none; }
+
+.work-title { display: block; font-size: 21px; font-weight: 500; line-height: 1.3; margin-top: 4px; }
+.work-line { color: var(--ink-soft); }
+
+.toggle {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--accent);
+  text-align: right;
+  transition: transform 0.2s ease;
+}
+details[open] .toggle { transform: rotate(45deg); }
+
+.work-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 32px;
+  padding: 0 0 28px;
+}
+.work-body h4 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+.work-body p { margin: 0; font-size: 16px; }
+.tools { grid-column: 1 / -1; font-size: 14px; color: var(--ink-soft); }
+.tools a { color: var(--accent); }
+
+summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* ---------- AI rows ---------- */
+
+.ai-list { list-style: none; margin: 0; padding: 0; }
+.ai-list li {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 6px 32px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+}
+.ai-list li:last-child { border-bottom: 1px solid var(--rule); }
+.ai-name { font-weight: 500; }
+.ai-flow { color: var(--ink-soft); font-size: 16px; }
+.ai-flow .arrow { color: var(--accent); padding: 0 4px; }
+
+.guardrails { margin-top: 36px; }
+.guardrails h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0 0 4px; }
+.guardrails ul { columns: 2; column-gap: 40px; padding-left: 18px; margin: 12px 0 0; }
+.guardrails li { break-inside: avoid; margin-bottom: 8px; }
+
+/* ---------- How I work ---------- */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 40px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+.principles li { border-top: 1px solid var(--rule); padding: 20px 0 24px; }
+.principles h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0 0 8px; }
+.principles p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+/* ---------- Writing ---------- */
+
+.post-list { list-style: none; margin: 12px 0 0; padding: 0; }
+.post-list li { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.post-list a { display: block; padding: 20px 0; text-decoration: none; }
+.post-list a:hover .post-title { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.post-title { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.25; margin-top: 4px; }
+.draft-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 1px 6px;
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+/* ---------- Quotes ---------- */
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 40px;
+  margin-top: 20px;
+}
+.quotes figure { margin: 0; }
+.quotes blockquote {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.35;
+}
+.quotes figcaption { font-size: 14px; color: var(--ink-soft); }
+.quotes figcaption strong { color: var(--ink); font-weight: 500; display: block; }
+
+/* ---------- Experience ---------- */
+
+.timeline { list-style: none; margin: 12px 0 0; padding: 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 130px 1fr 1.2fr;
+  gap: 4px 32px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+}
+.timeline li:last-child { border-bottom: 1px solid var(--rule); }
+.timeline .years { font-family: var(--mono); font-size: 14px; color: var(--ink-soft); padding-top: 2px; }
+.timeline .org { font-weight: 500; }
+.timeline .role { color: var(--ink-soft); }
+
+.coaching-note { color: var(--ink-soft); margin-top: 20px; font-size: 16px; }
+.coaching-note a { color: var(--accent); }
+
+/* ---------- About ---------- */
+
+.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; margin-top: 20px; }
+.about-grid p { margin: 0 0 1em; }
+.stat-list { list-style: none; margin: 0; padding: 0; }
+.stat-list li { display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--rule); }
+.stat-list li:last-child { border-bottom: 1px solid var(--rule); }
+.stat-list .num { font-family: var(--serif); font-size: 28px; min-width: 40px; color: var(--accent); }
+
+/* ---------- Contact & footer ---------- */
+
+.contact { padding: 80px 0 40px; }
+.contact p.big {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.25;
+  max-width: 760px;
+  margin: 0 0 24px;
+}
+.contact-links { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.contact-links a { border-bottom: 1px solid var(--ink); text-decoration: none; padding-bottom: 2px; }
+.contact-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+.epigraph { border-top: 1px solid var(--ink); padding: 48px 0 20px; text-align: center; }
+.epigraph blockquote { font-family: var(--serif); font-style: italic; font-size: 24px; margin: 0 auto 8px; max-width: 640px; line-height: 1.35; }
+.epigraph cite { font-style: normal; font-size: 14px; color: var(--ink-soft); }
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 24px 0 40px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------- Article pages (writing) ---------- */
+
+.article { max-width: 680px; padding: 56px 0 24px; }
+.article h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 5vw, 48px); line-height: 1.12; letter-spacing: -0.015em; margin: 10px 0 24px; }
+.article p, .article li { font-size: 18px; line-height: 1.7; }
+.article h2 { font-family: var(--serif); font-weight: 400; font-size: 28px; margin: 40px 0 8px; }
+.article .back { font-size: 15px; color: var(--accent); }
+.draft-note { background: var(--panel); border-left: 3px solid var(--accent); padding: 12px 16px; font-size: 15px; color: var(--ink-soft); }
+
+/* ---------- Phones and small screens ---------- */
+
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  .site-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .intro { padding: 44px 0 24px; }
+  .panel { padding: 4px 18px 18px; }
+  .work-list summary { grid-template-columns: 1fr 24px; }
+  .work-line { grid-column: 1 / 2; }
+  .toggle { grid-row: 1; grid-column: 2; }
+  .work-body, .principles, .quotes, .about-grid { grid-template-columns: 1fr; }
+  .ai-list li, .timeline li { grid-template-columns: 1fr; }
+  .guardrails ul { columns: 1; }
+  .section-head { flex-direction: column; gap: 4px; }
+}

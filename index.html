@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dave Criswell</title>
+  <meta name="description" content="Dave Criswell builds the systems underneath revenue: the CRM, the data, the automation, and the reporting that tells you what's actually working.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="wrap">
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-name">Dave Criswell</span>
+      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#ai">AI in operations</a>
+      <a href="#how">How I work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Intro ===== -->
+    <section class="intro">
+      <p>Hi, I&rsquo;m <strong>Dave</strong>. I build the <strong>systems</strong> underneath revenue: the <strong>CRM</strong>, the <strong>data</strong>, the <strong>automation</strong>, and the <strong>reporting</strong> that tells you what&rsquo;s <em>actually</em> working.</p>
+      <p>Lately that means giving a growing youth soccer club an <strong>operational backbone</strong>, and learning where <strong>AI</strong> genuinely earns its place in the work.</p>
+      <p>Off the clock, I <strong>coach soccer</strong> and have finished a couple of <strong>Ironmans</strong>.</p>
+      <div class="jump">
+        <a href="#work">Selected work &darr;</a>
+        <a href="#ai">AI in operations &darr;</a>
+        <a href="#writing">Writing &darr;</a>
+      </div>
+    </section>
+
+    <!-- ===== Selected work ===== -->
+    <section class="section" id="work">
+      <div class="panel">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p class="section-note">Click any row for the details</p>
+        </div>
+        <p class="lede">I&rsquo;m most useful where a function is being built, or where an existing one needs to work better. A few examples, with an honest note on where each one stands.</p>
+
+        <ul class="work-list">
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">Data pipeline</span><span class="work-title">A data foundation for a platform with no API</span></span>
+                <span class="work-line">Daily registration and roster data, flowing automatically into one base everyone can trust.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The problem</h4><p>The club&rsquo;s registration platform has no API. Player, roster, and subscription data lived in manual exports, so every report depended on whoever had last downloaded a CSV.</p></div>
+                <div><h4>What I built</h4><p>A scheduled pipeline that pulls the daily exports into cloud storage and feeds an Airtable base of players, subscriptions, and team assignments. Records match on stable IDs and are updated or created, never deleted.</p></div>
+                <div><h4>Where it stands</h4><p>Collecting and cleaning the data is automated. The final write-back step is still in progress, and I&rsquo;d rather say so than call it end-to-end.</p></div>
+                <p class="tools">Google Cloud Run &middot; Cloud Scheduler &middot; Cloud Storage &middot; Google Drive &middot; Airtable &middot; Zapier</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">CRM &amp; lifecycle</span><span class="work-title">A lead-to-enrollment funnel</span></span>
+                <span class="work-line">One clear path from a family&rsquo;s first question to a registered player.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The problem</h4><p>Families reached out through several channels, with no consistent way to qualify, route, or follow up on their questions.</p></div>
+                <div><h4>What I built</h4><p>A documented lead-to-enrollment workflow in HubSpot: intake, a qualification layer, territory-based routing to the right person, and follow-up sequences. Before building, I evaluated six CRMs and wrote the business case for the one we kept.</p></div>
+                <div><h4>Where it stands</h4><p>Automated from first inquiry through sales-qualified lead. Marking a family as a customer is still a manual step.</p></div>
+                <p class="tools">HubSpot &middot; Zapier</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">Staffing operations</span><span class="work-title">From schedule PDFs to payroll-ready shifts</span></span>
+                <span class="work-line">Turning schedules in every shape into clean shifts, then catching the mismatches before payroll.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The problem</h4><p>Hourly coaches work across many facilities and programs, and schedules arrive as PDFs, grids, screenshots, and spreadsheets, each region in its own format.</p></div>
+                <div><h4>What I built</h4><p>A repeatable process that turns any schedule into shift imports: one row per coach per day, overlapping blocks merged, set-up time added, and game end times calculated from age-group game lengths. A pre-payroll report then flags missing clock-ins and large variances by region.</p></div>
+                <div><h4>An example</h4><p>One summer schedule became 500 per-person shift rows across 32 dates, which consolidated into 119 shared shifts. Each step has a check, so nothing gets silently dropped.</p></div>
+                <p class="tools">Connecteam &middot; Google Sheets &middot; Python &middot; Claude</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">Feedback loops</span><span class="work-title">A weekend game-report system</span></span>
+                <span class="work-line">So directors know what happened at every game, and what needs a follow-up.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The problem</h4><p>There was no consistent way to learn what happened at weekend games, whether results were entered, or which concerns needed someone to follow up.</p></div>
+                <div><h4>What I built</h4><p>Every Friday, a sync rebuilds one list of fixtures from every league we play in. Coaches pick their game from a simple form and file one report. Directors get a prioritized follow-up queue, serious incidents at the top, and can nudge everyone who hasn&rsquo;t filed with one click.</p></div>
+                <div><h4>Why it&rsquo;s built this way</h4><p>It runs on Google Sheets because that&rsquo;s where staff already work. Safeguards keep reports attached when games are rescheduled and refuse a sync if a league&rsquo;s data suddenly drops.</p></div>
+                <p class="tools">Google Sheets &middot; Apps Script &middot; Zapier &middot; ClickUp</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">Reporting</span><span class="work-title">A dashboard that can show its math</span></span>
+                <span class="work-line">Year-over-year registration pacing, rebuilt so every number can be traced to its source.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The problem</h4><p>The first version of our registration pacing dashboard looked fine, but it couldn&rsquo;t be edited, didn&rsquo;t reconcile to the source data, and couldn&rsquo;t explain its own numbers.</p></div>
+                <div><h4>What I built</h4><p>A rebuild that compares rostered players by program, region, gender, and age group against the same date last year, with a parallel spreadsheet model that shows the work. Closed seasons are archived so a refresh never erases history.</p></div>
+                <div><h4>More</h4><p>I wrote up what I learned from the rebuild.</p></div>
+                <p class="tools"><a href="writing/a-dashboard-that-can-show-its-math.html">Read: A dashboard that can show its math &rarr;</a></p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">Marketing automation &middot; TrainingPeaks</span><span class="work-title">A 500,000-contact migration</span></span>
+                <span class="work-line">Tripled email-channel revenue in six months, against a twelve-month goal.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The project</h4><p>I led the selection and implementation of a new marketing automation platform, including migrating 500,000 contacts with hundreds of data points each.</p></div>
+                <div><h4>What it took</h4><p>Integrations with several existing systems, and close work with marketing, sales, development, and the executive team.</p></div>
+                <div><h4>The result</h4><p>A behavioral and demographic lifecycle program on the new platform tripled email-channel revenue within six months. The goal had been twelve.</p></div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>
+                <span><span class="label">Lifecycle growth &middot; Rafflecopter</span><span class="work-title">Personas, lifecycle stages, and the KPIs between them</span></span>
+                <span class="work-line">+32% average revenue per user and +30% lifetime value in one year.</span>
+                <span class="toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="work-body">
+                <div><h4>The approach</h4><p>Defined customer personas and lifecycle stages, then set the KPIs, success factors, and tactics for each stage, with a measurement framework to see progress.</p></div>
+                <div><h4>What I built</h4><p>Onboarding and lifecycle programs, plus the company&rsquo;s business KPI dashboard.</p></div>
+                <div><h4>The result</h4><p>A 32% increase in average revenue per user and a 30% increase in lifetime value within a year.</p></div>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== AI in operations ===== -->
+    <section class="section" id="ai">
+      <div class="section-head">
+        <h2>AI in operations</h2>
+        <p class="section-note">Useful, not magic</p>
+      </div>
+      <p class="lede">Most of my AI work isn&rsquo;t glamorous. It takes a recurring, messy input and turns it into a clean, checked output, so people can spend their time on players and families instead of spreadsheets. These run as saved, reusable workflows.</p>
+
+      <ul class="ai-list">
+        <li><span class="ai-name">League schedule import</span><span class="ai-flow">League export <span class="arrow">&rarr;</span> registration-platform import file, plus a punch list of team names that need a human</span></li>
+        <li><span class="ai-name">Season schedule export</span><span class="ai-flow">A league website with no download button <span class="arrow">&rarr;</span> a full-season workbook of about 475 games, with a refresh mode</span></li>
+        <li><span class="ai-name">Coach shift import</span><span class="ai-flow">Schedule PDFs, grids, and screenshots <span class="arrow">&rarr;</span> shift import file, merged and padded</span></li>
+        <li><span class="ai-name">Pre-payroll exception report</span><span class="ai-flow">Timesheet export <span class="arrow">&rarr;</span> missing clock-ins and large variances, by region</span></li>
+        <li><span class="ai-name">Registration follow-up tracker</span><span class="ai-flow">Program exports <span class="arrow">&rarr;</span> who has and hasn&rsquo;t registered, by team, with a follow-up list</span></li>
+        <li><span class="ai-name">Process documentation</span><span class="ai-flow">A rough outline <span class="arrow">&rarr;</span> a standardized process document, filed where people can find it</span></li>
+        <li><span class="ai-name">Camp family recap</span><span class="ai-flow">The day&rsquo;s notes <span class="arrow">&rarr;</span> a draft family email and social post, reviewed before anything goes out</span></li>
+        <li><span class="ai-name">Inbox themes</span><span class="ai-flow">A full inbox export <span class="arrow">&rarr;</span> the questions families actually ask most, grouped by theme</span></li>
+      </ul>
+
+      <div class="guardrails">
+        <h3>Guardrails I build in</h3>
+        <ul>
+          <li>Drafts only. Nothing goes to families automatically.</li>
+          <li>Never overwrite a person&rsquo;s edits.</li>
+          <li>Flag conflicts instead of quietly resolving them.</li>
+          <li>Verification checks on every import.</li>
+          <li>Limit what personal data an AI tool can see.</li>
+          <li>Write the process down, so it outlives the person who built it.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== How I work ===== -->
+    <section class="section" id="how">
+      <div class="section-head">
+        <h2>How I work</h2>
+      </div>
+      <ul class="principles">
+        <li><h3>Systems first, then the tool</h3><p>Understand how the work actually flows and who owns what, then choose software that fits. Not the other way around.</p></li>
+        <li><h3>Meet people where they work</h3><p>Put the form in the app coaches already open. Use the platform families already have. Adoption is the real test of a system.</p></li>
+        <li><h3>Show the math</h3><p>If a number can&rsquo;t be traced back to its source, it isn&rsquo;t ready to make decisions with.</p></li>
+        <li><h3>Don&rsquo;t let perfect block useful</h3><p>Design a manual fallback so something helpful ships now, while the fuller version gets built.</p></li>
+        <li><h3>Be honest about status</h3><p>&ldquo;Automated through step four, manual after that&rdquo; is more useful than &ldquo;fully automated.&rdquo;</p></li>
+        <li><h3>Pilot, then scale</h3><p>Start with one team or one region, learn what breaks, and earn the right to roll it out.</p></li>
+      </ul>
+    </section>
+
+    <!-- ===== Writing ===== -->
+    <section class="section" id="writing">
+      <div class="section-head">
+        <h2>Writing</h2>
+        <p class="section-note">Notes on systems, reporting, and practical AI</p>
+      </div>
+      <ul class="post-list">
+        <li>
+          <a href="writing/a-dashboard-that-can-show-its-math.html">
+            <span class="label">Reporting<span class="draft-tag">Draft</span></span>
+            <span class="post-title">A dashboard that can show its math</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Kind words ===== -->
+    <section class="section" id="kind-words">
+      <div class="section-head">
+        <h2>Kind words</h2>
+      </div>
+      <div class="quotes">
+        <figure>
+          <blockquote>&ldquo;He&rsquo;s a skillful operator when it comes to pulling data together from many sources and creating a coherent and quantitative picture of the organization.&rdquo;</blockquote>
+          <figcaption><strong>Justin Ratner</strong>Co-Founder, Rafflecopter</figcaption>
+        </figure>
+        <figure>
+          <blockquote>&ldquo;In addition to a deep understanding of our company&rsquo;s internal analytics, Dave also possessed a firm grasp of the emotional side of our customers.&rdquo;</blockquote>
+          <figcaption><strong>Greg Goodson</strong>Co-Founder, Rafflecopter</figcaption>
+        </figure>
+        <figure>
+          <blockquote>&ldquo;He drove change. He challenged us to be better. He took us to new places rapidly.&rdquo;</blockquote>
+          <figcaption><strong>Steve Lankler</strong>Managing Director, CIT Digital Small Business Solutions</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p class="section-note"><a href="https://www.linkedin.com/in/davecriswell/">Full details on LinkedIn &rarr;</a></p>
+      </div>
+      <ul class="timeline">
+        <li><span class="years">2023&ndash;now</span><span class="org">Multi-region youth soccer club</span><span class="role">Assistant Executive Director, Marketing &amp; Systems Operations</span></li>
+        <li><span class="years">2022&ndash;2023</span><span class="org">Bonusly</span><span class="role">Marketing Operations</span></li>
+        <li><span class="years">2017&ndash;2022</span><span class="org">Avid4 Adventure</span><span class="role">Director of Marketing &amp; Customer Experience</span></li>
+        <li><span class="years">2014&ndash;2017</span><span class="org">Rafflecopter</span><span class="role">Director of Marketing</span></li>
+        <li><span class="years">2011&ndash;2014</span><span class="org">TrainingPeaks</span><span class="role">Director of Marketing</span></li>
+        <li><span class="years">2010&ndash;2011</span><span class="org">Montague Corporation</span><span class="role">Marketing Manager</span></li>
+      </ul>
+      <p class="coaching-note">Alongside all of it: about a decade of coaching soccer at the high school and club level.</p>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>I&rsquo;m a native New Englander and a calm presence by nature. The part of my work I care about most is the people on the other end of a system: the coach filling out a form after a long Saturday, the parent trying to register a kid for the first time, the director who needs one number they can trust.</p>
+          <p>Coaching and operations turn out to be similar work. You set people up to succeed, watch what actually happens, and adjust, patiently and without drama.</p>
+          <p>I&rsquo;m also interested in where AI is genuinely useful in operations, and where it&rsquo;s just noise. This site is part of that: I&rsquo;m building it with Claude Code as a way to learn.</p>
+        </div>
+        <ul class="stat-list" aria-label="Endurance races">
+          <li><span class="num">2</span><span>Ironman triathlons</span></li>
+          <li><span class="num">6</span><span>Half Ironmans</span></li>
+          <li><span class="num">5</span><span>Marathons</span></li>
+          <li><span class="num">1</span><span>Ultramarathon</span></li>
+          <li><span class="num">10</span><span>Years coaching soccer, give or take</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact">
+      <p class="big">I&rsquo;m always happy to talk systems, operations, practical AI, or youth sports.</p>
+      <div class="contact-links">
+        <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
+        <a href="https://www.linkedin.com/in/davecriswell/">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="epigraph" aria-label="A favorite quote">
+    <blockquote>&ldquo;Only those who will risk going too far can possibly find out how far one can go.&rdquo;</blockquote>
+    <cite>T.S. Eliot</cite>
+  </section>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Dave Criswell</span>
+    <span>Built with Claude Code</span>
+  </footer>
+
+</div>
+</body>
+</html>
