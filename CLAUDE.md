@@ -4,9 +4,10 @@ Dave Criswell's personal website. Plain HTML and CSS, no build step, hosted on G
 Dave is new to development and uses this project to learn Claude Code and GitHub, so explain changes in plain language.
 
 ## Files
-- `index.html` is the home page. All sections live here.
-- `style.css` holds every style. Colors and fonts are tokens at the top in `:root`.
-- `writing/` holds one HTML page per essay. Each links `../style.css`.
+GitHub Pages publishes only the `docs/` folder. Files outside it (like this one) stay off the website but are still public on github.com.
+- `docs/index.html` is the home page. All sections live here.
+- `docs/style.css` holds every style. Colors and fonts are tokens at the top in `:root`.
+- `docs/writing/` holds one HTML page per essay. Each links `../style.css`.
 
 ## Positioning
 "I build the systems underneath revenue: the CRM, the data, the automation, and the reporting that tells you what's actually working."
