@@ -14,13 +14,13 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 Audience: potential employers and partners. They should understand what Dave does and who he is as a person.
 
 ## Voice
-First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. Describe status honestly (for example "automated through X, manual after that").
+First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. Case studies use three parts: The problem, What I built, The result. Write them from a go-to-market lens: what changed for revenue, the team's capacity, or the customer experience.
 
 ## Design
 Inspired by m3ka.com (warm off-white, serif headings, mono labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now. No photo yet.
 
 ## Public-content rules (this repository is public)
-- Don't name the current employer. Use "a multi-region youth soccer club."
+- Name "Select Soccer Club" only in the Experience section. Everywhere else, say "the club" or "a youth soccer club."
 - Call the registration platform "the club's registration platform." Don't name it.
 - No colleague, staff, coach, family, or player names.
 - No revenue, staff counts, internal metrics, pacing or retention figures, or vendor-selection details.

@@ -52,20 +52,20 @@
           <h2>Selected work</h2>
           <p class="section-note">Click any row for the details</p>
         </div>
-        <p class="lede">I&rsquo;m most useful where a function is being built, or where an existing one needs to work better. A few examples, with an honest note on where each one stands.</p>
+        <p class="lede">I&rsquo;m most useful where a function is being built, or where an existing one needs to work better. A few examples: the problem, what I built, and what changed as a result.</p>
 
         <ul class="work-list">
           <li>
             <details>
               <summary>
                 <span><span class="label">Data pipeline</span><span class="work-title">A data foundation for a platform with no API</span></span>
-                <span class="work-line">Daily registration and roster data, flowing automatically into one base everyone can trust.</span>
+                <span class="work-line">Unlocking registration data so reporting and internal tools have one source of truth.</span>
                 <span class="toggle" aria-hidden="true">+</span>
               </summary>
               <div class="work-body">
-                <div><h4>The problem</h4><p>The club&rsquo;s registration platform has no API. Player, roster, and subscription data lived in manual exports, so every report depended on whoever had last downloaded a CSV.</p></div>
-                <div><h4>What I built</h4><p>A scheduled pipeline that pulls the daily exports into cloud storage and feeds an Airtable base of players, subscriptions, and team assignments. Records match on stable IDs and are updated or created, never deleted.</p></div>
-                <div><h4>Where it stands</h4><p>Collecting and cleaning the data is automated. The final write-back step is still in progress, and I&rsquo;d rather say so than call it end-to-end.</p></div>
+                <div><h4>The problem</h4><p>Every report and internal tool needed data that was locked inside the club&rsquo;s registration platform, which has no API or MCP connection. Player, roster, and subscription data lived in manual exports, so every number depended on whoever had last downloaded a CSV.</p></div>
+                <div><h4>What I built</h4><p>A pipeline that moves scheduled exports into cloud storage and feeds an Airtable base, which serves as the club&rsquo;s data layer. Records match on stable IDs, so each update lands on the right player and nothing is duplicated or lost.</p></div>
+                <div><h4>The result</h4><p>One trusted source for the data the club runs on. New reports, dashboards, and internal apps build on top of it, instead of each one starting from another spreadsheet.</p></div>
                 <p class="tools">Google Cloud Run &middot; Cloud Scheduler &middot; Cloud Storage &middot; Google Drive &middot; Airtable &middot; Zapier</p>
               </div>
             </details>
@@ -75,13 +75,13 @@
             <details>
               <summary>
                 <span><span class="label">CRM &amp; lifecycle</span><span class="work-title">A lead-to-enrollment funnel</span></span>
-                <span class="work-line">One clear path from a family&rsquo;s first question to a registered player.</span>
+                <span class="work-line">Every interested family gets a prompt response and a clear path to registering.</span>
                 <span class="toggle" aria-hidden="true">+</span>
               </summary>
               <div class="work-body">
-                <div><h4>The problem</h4><p>Families reached out through several channels, with no consistent way to qualify, route, or follow up on their questions.</p></div>
-                <div><h4>What I built</h4><p>A documented lead-to-enrollment workflow in HubSpot: intake, a qualification layer, territory-based routing to the right person, and follow-up sequences. Before building, I evaluated six CRMs and wrote the business case for the one we kept.</p></div>
-                <div><h4>Where it stands</h4><p>Automated from first inquiry through sales-qualified lead. Marking a family as a customer is still a manual step.</p></div>
+                <div><h4>The problem</h4><p>Families reached out through several channels, with no consistent way to qualify them, route them, log the conversation, or follow up. In peak season, inquiries outpaced what the team could handle, so good leads were missed and went cold.</p></div>
+                <div><h4>What I built</h4><p>A documented lead-to-enrollment workflow in HubSpot: intake, a qualification layer, routing by region, and follow-up sequences triggered by each prospect&rsquo;s digital signals. Before building, I evaluated six CRMs and wrote the business case for the one we kept.</p></div>
+                <div><h4>The result</h4><p>Every prospect is contacted promptly, then gets timely touchpoints that help qualify and convert them. Conversion rates went up, and families move from first question to registered faster.</p></div>
                 <p class="tools">HubSpot &middot; Zapier</p>
               </div>
             </details>
@@ -91,13 +91,13 @@
             <details>
               <summary>
                 <span><span class="label">Staffing operations</span><span class="work-title">From schedule PDFs to payroll-ready shifts</span></span>
-                <span class="work-line">Turning schedules in every shape into clean shifts, then catching the mismatches before payroll.</span>
+                <span class="work-line">Schedules in any format become accurate shifts in a fraction of the time.</span>
                 <span class="toggle" aria-hidden="true">+</span>
               </summary>
               <div class="work-body">
-                <div><h4>The problem</h4><p>Hourly coaches work across many facilities and programs, and schedules arrive as PDFs, grids, screenshots, and spreadsheets, each region in its own format.</p></div>
-                <div><h4>What I built</h4><p>A repeatable process that turns any schedule into shift imports: one row per coach per day, overlapping blocks merged, set-up time added, and game end times calculated from age-group game lengths. A pre-payroll report then flags missing clock-ins and large variances by region.</p></div>
-                <div><h4>An example</h4><p>One summer schedule became 500 per-person shift rows across 32 dates, which consolidated into 119 shared shifts. Each step has a check, so nothing gets silently dropped.</p></div>
+                <div><h4>The problem</h4><p>Entering hourly staff schedules into the club&rsquo;s scheduling platform by hand took a lot of time. Schedules arrived as screenshots, PDFs, and spreadsheets, and retyping them invited mistakes that could follow through to payroll.</p></div>
+                <div><h4>What I built</h4><p>A repeatable process that turns a schedule in any format into a shift import, building accurate shifts automatically from the rules for each type of job. Before payroll, a report flags differences between scheduled and worked hours so they get fixed first.</p></div>
+                <div><h4>The result</h4><p>Schedule entry takes a small fraction of the time it used to, and it&rsquo;s more accurate, with fewer errors reaching payroll.</p></div>
                 <p class="tools">Connecteam &middot; Google Sheets &middot; Python &middot; Claude</p>
               </div>
             </details>
@@ -107,13 +107,13 @@
             <details>
               <summary>
                 <span><span class="label">Feedback loops</span><span class="work-title">A weekend game-report system</span></span>
-                <span class="work-line">So directors know what happened at every game, and what needs a follow-up.</span>
+                <span class="work-line">Directors know what happened at every game, and what needs a follow-up.</span>
                 <span class="toggle" aria-hidden="true">+</span>
               </summary>
               <div class="work-body">
-                <div><h4>The problem</h4><p>There was no consistent way to learn what happened at weekend games, whether results were entered, or which concerns needed someone to follow up.</p></div>
-                <div><h4>What I built</h4><p>Every Friday, a sync rebuilds one list of fixtures from every league we play in. Coaches pick their game from a simple form and file one report. Directors get a prioritized follow-up queue, serious incidents at the top, and can nudge everyone who hasn&rsquo;t filed with one click.</p></div>
-                <div><h4>Why it&rsquo;s built this way</h4><p>It runs on Google Sheets because that&rsquo;s where staff already work. Safeguards keep reports attached when games are rescheduled and refuse a sync if a league&rsquo;s data suddenly drops.</p></div>
+                <div><h4>The problem</h4><p>Directors had no consistent way to hear from coaches about weekend games: what happened, whether results were entered, and which concerns needed a follow-up. Getting answers meant a lot of time-consuming back-and-forth.</p></div>
+                <div><h4>What I built</h4><p>A weekly sync that builds one list of fixtures from every league we play in. Coaches pick their game from a simple form and file one report. Directors get a prioritized follow-up queue, with serious incidents at the top, and can nudge everyone who hasn&rsquo;t filed with one click.</p></div>
+                <div><h4>The result</h4><p>Directors save hours they used to spend chasing updates. Issues surface and get addressed sooner, which means a better experience for players and families.</p></div>
                 <p class="tools">Google Sheets &middot; Apps Script &middot; Zapier &middot; ClickUp</p>
               </div>
             </details>
@@ -123,13 +123,13 @@
             <details>
               <summary>
                 <span><span class="label">Reporting</span><span class="work-title">A dashboard that can show its math</span></span>
-                <span class="work-line">Year-over-year registration pacing, rebuilt so every number can be traced to its source.</span>
+                <span class="work-line">Year-over-year registration pacing that leadership can rely on.</span>
                 <span class="toggle" aria-hidden="true">+</span>
               </summary>
               <div class="work-body">
-                <div><h4>The problem</h4><p>The first version of our registration pacing dashboard looked fine, but it couldn&rsquo;t be edited, didn&rsquo;t reconcile to the source data, and couldn&rsquo;t explain its own numbers.</p></div>
-                <div><h4>What I built</h4><p>A rebuild that compares rostered players by program, region, gender, and age group against the same date last year, with a parallel spreadsheet model that shows the work. Closed seasons are archived so a refresh never erases history.</p></div>
-                <div><h4>More</h4><p>I wrote up what I learned from the rebuild.</p></div>
+                <div><h4>The problem</h4><p>Leadership relies on a registration pacing dashboard to see whether we&rsquo;re ahead of or behind last year. But you had to understand the data underneath it to trust what it was saying.</p></div>
+                <div><h4>What I built</h4><p>A rebuild that compares rostered players by program, region, gender, and age group against the same date last year, with a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases history.</p></div>
+                <div><h4>The result</h4><p>A management reporting tool people can rely on. The data feeding it is transparent, so when something looks off, the cause is quick to find.</p></div>
                 <p class="tools"><a href="writing/a-dashboard-that-can-show-its-math.html">Read: A dashboard that can show its math &rarr;</a></p>
               </div>
             </details>
@@ -259,8 +259,8 @@
         <p class="section-note"><a href="https://www.linkedin.com/in/davecriswell/">Full details on LinkedIn &rarr;</a></p>
       </div>
       <ul class="timeline">
-        <li><span class="years">2023&ndash;now</span><span class="org">Multi-region youth soccer club</span><span class="role">Assistant Executive Director, Marketing &amp; Systems Operations</span></li>
-        <li><span class="years">2022&ndash;2023</span><span class="org">Bonusly</span><span class="role">Marketing Operations</span></li>
+        <li><span class="years">2023&ndash;now</span><span class="org">Select Soccer Club</span><span class="role">Assistant Executive Director, Marketing &amp; Systems Operations</span></li>
+        <li><span class="years">2022&ndash;2023</span><span class="org">Bonusly</span><span class="role">Marketing &amp; Revenue Operations</span></li>
         <li><span class="years">2017&ndash;2022</span><span class="org">Avid4 Adventure</span><span class="role">Director of Marketing &amp; Customer Experience</span></li>
         <li><span class="years">2014&ndash;2017</span><span class="org">Rafflecopter</span><span class="role">Director of Marketing</span></li>
         <li><span class="years">2011&ndash;2014</span><span class="org">TrainingPeaks</span><span class="role">Director of Marketing</span></li>
