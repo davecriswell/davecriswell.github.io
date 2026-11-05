@@ -20,7 +20,8 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 Inspired by m3ka.com (warm off-white, serif headings, mono labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now. No photo yet.
 
 ## Public-content rules (this repository is public)
-- Name "Select Soccer Club" only in the Experience section. Everywhere else, say "the club" or "a youth soccer club."
+- Name "Select Soccer Club" only in the Experience section, plus the "Select Playbook" by name. Everywhere else, say "the club" or "a youth soccer club."
+- Playbook counts are approved for public use: 63 plays, 6 areas, 10 run as skills.
 - Call the registration platform "the club's registration platform." Don't name it.
 - No colleague, staff, coach, family, or player names.
 - No revenue, staff counts, internal metrics, pacing or retention figures, or vendor-selection details.

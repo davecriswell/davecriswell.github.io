@@ -23,6 +23,7 @@
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="#work">Work</a>
+      <a href="#playbook">Playbook</a>
       <a href="#ai">AI in operations</a>
       <a href="#how">How I work</a>
       <a href="#writing">Writing</a>
@@ -53,6 +54,13 @@
           <p class="section-note">Click any row for the details</p>
         </div>
         <p class="lede">I&rsquo;m most useful where a function is being built, or where an existing one needs to work better. A few examples: the problem, what I built, and what changed as a result.</p>
+
+        <a class="feature" href="#playbook">
+          <span class="label">Featured &middot; Operations</span>
+          <span class="feature-title">The Select Playbook</span>
+          <span class="feature-line">How the club runs, written down as 63 repeatable plays. Ten of them already run as AI skills, and Claude helps keep the rest current.</span>
+          <span class="feature-cta">See inside the Playbook &darr;</span>
+        </a>
 
         <ul class="work-list">
           <li>
@@ -168,14 +176,86 @@
       </div>
     </section>
 
+    <!-- ===== The Select Playbook ===== -->
+    <section class="section" id="playbook">
+      <div class="section-head">
+        <h2>The Select Playbook</h2>
+        <p class="section-note">63 plays &middot; 6 areas &middot; 10 run as skills</p>
+      </div>
+      <p class="lede">Most of what keeps a club running lives in a few people&rsquo;s heads. The Playbook writes it down, one repeatable &ldquo;play&rdquo; at a time, so the work doesn&rsquo;t depend on who happens to be available.</p>
+
+      <div class="work-body playbook-pbr">
+        <div><h4>The problem</h4><p>Most of the club&rsquo;s repeatable processes lived in one or two people&rsquo;s heads. Getting something done often meant finding the right person to ask.</p></div>
+        <div><h4>What I built</h4><p>An operations playbook of 63 plays across six areas: registration, scheduling, staffing, data, marketing, and leadership. Every play follows the same structure, and ten of them run as saved AI skills, so the documentation and the automation are the same thing.</p></div>
+        <div><h4>The result</h4><p>Knowledge that outlives any one person. Anyone can see how a process works, who owns it, and what starts it, and the most repetitive plays are already automated.</p></div>
+      </div>
+
+      <h3 class="sub">Anatomy of a play</h3>
+      <ul class="anatomy">
+        <li><span class="label">01 &middot; Purpose</span>Why it exists</li>
+        <li><span class="label">02 &middot; Owner</span>Who&rsquo;s accountable</li>
+        <li><span class="label">03 &middot; Trigger</span>What starts it</li>
+        <li><span class="label">04 &middot; Tools</span>Systems involved</li>
+        <li><span class="label">05 &middot; Steps</span>What happens, in order</li>
+        <li><span class="label">06 &middot; Rules</span>What must always, or never, happen</li>
+        <li><span class="label">07 &middot; Source</span>Where the data comes from</li>
+        <li><span class="label">08 &middot; Status</span>Draft, live, or automated</li>
+      </ul>
+
+      <h3 class="sub">How it stays current</h3>
+      <ol class="loop">
+        <li><span class="label">Step 1</span><strong>Work happens</strong>Everyday conversations and tasks in the club&rsquo;s Claude workspace.</li>
+        <li><span class="label">Step 2</span><strong>Claude spots a candidate</strong>It&rsquo;s set up to notice repeatable systems and suggest them for the Playbook.</li>
+        <li><span class="label">Step 3</span><strong>The update skill places it</strong>A Playbook update skill decides where it belongs: a new play, or an update to an existing one.</li>
+        <li><span class="label">Step 4</span><strong>A person reviews it</strong>Nothing goes into the Playbook without someone checking it first.</li>
+        <li><span class="label">Step 5</span><strong>The Playbook grows</strong>The most repetitive plays become skills of their own.</li>
+      </ol>
+
+      <h3 class="sub">A sample play</h3>
+      <article class="play">
+        <header class="play-head">
+          <span><span class="label">Play &middot; Data</span><span class="play-title">Game results dashboard</span></span>
+          <span class="status-pill">Live &middot; runs as a skill</span>
+        </header>
+        <dl>
+          <div class="l"><dt>Purpose</dt><dd>One view of how every team is doing, across every league the club plays in.</dd></div>
+          <div><dt>Owner</dt><dd>Marketing &amp; Systems Operations</dd></div>
+          <div class="l"><dt>Trigger</dt><dd>A new results export from the leagues.</dd></div>
+          <div><dt>Tools</dt><dd>League results exports, a team-mapping sheet, a saved Claude skill, and an interactive HTML dashboard.</dd></div>
+          <div class="wide"><dt>Steps</dt><dd><ol>
+            <li>Collect the latest results from each league.</li>
+            <li>Show every result from the club&rsquo;s perspective: our score first, then a win, loss, or draw.</li>
+            <li>Match each game to a club team using the mapping sheet, and roll leagues up into groups such as &ldquo;State&rdquo; and &ldquo;ECNL.&rdquo;</li>
+            <li>Rebuild the dashboard, with filters for league, region, age group, and team.</li>
+          </ol></dd></div>
+          <div class="l"><dt>Rules</dt><dd>Never edit the source exports. Flag any team that won&rsquo;t match instead of guessing.</dd></div>
+          <div><dt>Source</dt><dd>League results exports and the club&rsquo;s team-mapping sheet.</dd></div>
+          <div class="wide"><dt>Status</dt><dd>Live. Runs as a saved skill, so a new export rebuilds the dashboard in one step.</dd></div>
+        </dl>
+      </article>
+    </section>
+
     <!-- ===== AI in operations ===== -->
     <section class="section" id="ai">
       <div class="section-head">
         <h2>AI in operations</h2>
         <p class="section-note">Useful, not magic</p>
       </div>
-      <p class="lede">Most of my AI work isn&rsquo;t glamorous. It takes a recurring, messy input and turns it into a clean, checked output, so people can spend their time on players and families instead of spreadsheets. These run as saved, reusable workflows.</p>
+      <p class="lede">Most of my AI work isn&rsquo;t glamorous. It takes a recurring, messy input and turns it into a clean, checked output, so people can spend their time on players and families instead of spreadsheets. </p>
 
+      <h3 class="sub">How the club&rsquo;s Claude workspace is set up</h3>
+      <p class="lede">I set up and configured the club&rsquo;s Claude Team account around a few deliberate decisions:</p>
+      <ul class="principles setup">
+        <li><h3>A written AI use policy</h3><p>We agreed on the rules first: only aggregated or pseudonymous player data, read-only lookups through connectors, and drafts that a person reviews before anything is sent.</p></li>
+        <li><h3>Connected to where work happens</h3><p>Connectors to Google Workspace, HubSpot, ClickUp, Notion, and meeting notes, plus Zapier for other apps, so answers come from the club&rsquo;s real systems instead of copy and paste.</p></li>
+        <li><h3>Shared skills for recurring work</h3><p>Repeatable tasks are saved as skills anyone on the team can run, so the same job gets done the same way every time.</p></li>
+        <li><h3>Built to grow the Playbook</h3><p>Claude is set up to watch for repeatable systems and suggest them as Playbook candidates, so documentation happens during the work, not after it.</p></li>
+        <li><h3>An AI fluency rubric</h3><p>A rubric across six club roles that describes what good AI use looks like in each one, so people know what to aim for.</p></li>
+        <li><h3>Leadership and admin first</h3><p>Access started with leadership and admin roles, so we could learn what works before widening it.</p></li>
+      </ul>
+
+      <h3 class="sub">Everyday automations</h3>
+      <p class="lede">These run as saved, reusable skills.</p>
       <ul class="ai-list">
         <li><span class="ai-name">League schedule import</span><span class="ai-flow">League export <span class="arrow">&rarr;</span> registration-platform import file, plus a punch list of team names that need a human</span></li>
         <li><span class="ai-name">Season schedule export</span><span class="ai-flow">A league website with no download button <span class="arrow">&rarr;</span> a full-season workbook of about 475 games, with a refresh mode</span></li>
