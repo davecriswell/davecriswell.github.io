@@ -19,7 +19,7 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
 - **The header and footer are repeated on every page.** If you change one, change it on all six pages.
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
-- The About photo is `docs/images/dave.jpg` (880 x 1100, cropped so no bystanders are in frame). To change it, replace that file.
+- The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide on desktop, 220px on phones). To change it, replace that file and update the `width`/`height` on its `<img>` tag in `docs/about/index.html`.
 - Menu: Work · Playbook & AI · About · Contact. Contact jumps to the footer (`#contact`) on the current page.
 - Each case study has an anchor so one example can be linked directly: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
 
@@ -56,10 +56,12 @@ Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, t
 - **Custom domain:** move the site to davecriswell.com (see "Custom domain" below).
 - **Optional:** a short Avid4 Adventure or Bonusly case study to cover 2017 to 2023.
 
-## Custom domain
-- `docs/CNAME` holds the domain (one line: `davecriswell.com`). GitHub Pages reads it from the publishing folder.
-- The domain is also set in the repository's Settings → Pages, with "Enforce HTTPS" on, and verified under the account's Pages settings.
-- Old github.io links redirect to the custom domain automatically.
+## Custom domain (planned, not done yet)
+The site still lives at davecriswell.github.io. davecriswell.com is registered with Squarespace Domains and still points to the old WordPress site. The plan for the move:
+1. In Squarespace Domains, point the domain's DNS at GitHub Pages (the A records for the root domain, plus a `www` CNAME record pointing to `davecriswell.github.io`).
+2. Add `docs/CNAME` with one line: `davecriswell.com`. Do this only once the DNS records are in place; adding it earlier sends visitors to a domain that doesn't reach the site yet.
+3. Set the domain in the repository's Settings → Pages, turn on "Enforce HTTPS" once GitHub has issued the certificate, and verify the domain under the account's Pages settings.
+4. After the move, old github.io links redirect to davecriswell.com automatically.
 
 ## Public-content rules (this repository is public)
 - Select Soccer Club can be named. Write about Select with respect: describe challenges as the natural ones of a growing club, and credit the club for the work it supported. Never criticize people or the club.
@@ -70,4 +72,6 @@ Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, t
 - No phone number, home address, or location. Running and riding copy says "the roads and trails near home."
 - Badges and "Built to hold up" lines describe the work, never the people who did or didn't use it.
 - Keep the closing line as it is: an open invitation to talk systems, operations, practical AI, or youth sports.
+- Nothing that suggests a job search.
 - Only publish projects and past work Dave has approved for public use. Ask Dave before adding anything else.
+- The private source brief lives in Dave's Google Drive ("dave-criswell-website-brief.md"). Never copy it into this repository.
