@@ -19,7 +19,7 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
 - **The header and footer are repeated on every page.** If you change one, change it on all six pages.
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
-- The About photo is `docs/images/dave.jpg` (880 x 1100, cropped so no bystanders are in frame). To change it, replace that file.
+- The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide). To change it, replace that file.
 - Menu: Work · Playbook & AI · About · Contact. Contact jumps to the footer (`#contact`) on the current page.
 - Each case study has an anchor so one example can be shared: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
 
