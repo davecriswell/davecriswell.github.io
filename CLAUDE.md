@@ -21,6 +21,7 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 - **The header and footer are repeated on every page.** If you change one, change it on every page (seven pages, counting each essay).
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
 - The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide on desktop, 220px on phones). To change it, replace that file and update the `width`/`height` on its `<img>` tag in `docs/about/index.html`.
+- LinkedIn links open in a new tab (`target="_blank" rel="noopener"`), in the footer on every page and in About's Experience section.
 - Menu: Work · Playbook & AI · Writing · About · Contact. Contact jumps to the footer (`#contact`) on the current page. On narrow phones the menu wraps to two lines; the phone `scroll-margin-top` allows for that.
 - Each case study has an anchor so one example can be linked directly: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
 
