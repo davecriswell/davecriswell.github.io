@@ -396,8 +396,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   .wrap { padding: 0 16px; }
   .site-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 0 12px; }
   .brand-tag { display: none; }   /* keeps the pinned header short on phones */
-  .site-nav { gap: 4px 20px; }
-  [id] { scroll-margin-top: 96px; }
+  .site-nav { gap: 4px 14px; font-size: 15px; }
+  [id] { scroll-margin-top: 132px; }   /* room for a two-line menu on narrow phones */
   .intro { padding: 44px 0 16px; }
   .page-intro { padding: 40px 0 8px; }
   .section-head { flex-direction: column; gap: 4px; }
@@ -414,4 +414,74 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   .play-body > div { grid-template-columns: 1fr; gap: 4px; padding: 14px 18px; }
   .guardrail-list { columns: 1; }
   .photo { max-width: 220px; }
+}
+
+/* ---------- Essays ---------- */
+
+.post-dek { display: block; color: var(--ink-soft); margin-top: 6px; max-width: 640px; }
+.essay h2 { margin-top: 48px; }
+.essay ul { padding-left: 22px; }
+.essay li { margin-bottom: 10px; }
+.essay a:not(.back) { color: var(--accent); text-underline-offset: 3px; }
+.essay blockquote {
+  margin: 24px 0;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--accent);
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.essay blockquote p { font-size: inherit; margin: 0; }
+.essay-cont { padding-top: 8px; }
+
+/* ---------- Architecture diagram (in "The Club Platform I Keep Sketching") ---------- */
+
+.arch { max-width: 860px; margin: 8px 0 8px; padding: 0; }
+.arch-row { display: grid; gap: 10px; }
+.arch-people { grid-template-columns: repeat(3, 1fr); }
+.arch-outside { grid-template-columns: repeat(4, 1fr); }
+.arch-box {
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 12px 14px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+}
+.arch-box span { display: block; font-weight: 400; font-size: 13px; color: var(--ink-soft); }
+.arch-link {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  padding: 8px 0;
+}
+.arch-ai { background: var(--accent); color: var(--paper); padding: 14px 18px; text-align: center; }
+.arch-ai strong { display: block; font-weight: 500; }
+.arch-ai span { font-size: 14px; opacity: 0.85; }
+.arch-group { border: 1px solid var(--rule); background: var(--panel); padding: 14px 16px 16px; }
+.arch-group > .label { margin-bottom: 10px; color: var(--accent); }
+.arch-modules {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.arch-modules li { background: var(--card); border: 1px solid var(--rule); padding: 8px 10px; font-size: 14px; }
+.arch-core { background: #e9eef0; }
+.arch-core-lead { font-size: 15px; margin: 0 0 12px; }
+.arch-entities {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.arch-entities li { background: #fff; border: 1px solid var(--rule); padding: 10px 12px; font-size: 13px; color: var(--ink-soft); }
+.arch-entities strong { display: block; color: var(--ink); font-size: 15px; font-weight: 500; margin-bottom: 2px; }
+.arch-note { font-size: 13px; color: var(--ink-soft); margin: 12px 0 0; }
+.arch figcaption { margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+
+@media (max-width: 760px) {
+  .arch-people { grid-template-columns: 1fr 1fr 1fr; }
+  .arch-box { padding: 10px 6px; font-size: 13px; }
+  .arch-outside, .arch-modules, .arch-entities { grid-template-columns: 1fr 1fr; }
+  .essay blockquote { font-size: 19px; }
 }

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Club Platform I Keep Sketching · Dave Criswell</title>
+  <meta name="description" content="What a pile of club workarounds says about the platform youth clubs actually need: an open club data core, with AI on top.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <!-- Header: the same on every page. If you change it, change it on every page. -->
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-name">Dave Criswell</span>
+      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/work/">Work</a>
+      <a href="/playbook/">Playbook &amp; AI</a>
+      <a href="/writing/" aria-current="page">Writing</a>
+      <a href="/about/">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <article class="article essay">
+      <a class="back" href="/writing/">&larr; All writing</a>
+      <span class="label">Club software &middot; November 11, 2026</span>
+      <h1>The Club Platform I Keep Sketching</h1>
+
+      <p>No club management platform is perfect, and I doubt one ever will be. Youth clubs vary too much for that. A 200-player community club, a 2,000-player multi-region competitive club and a volleyball club that runs like a retail business with courts to fill all need different things, and every club has its own history, habits and quirks.</p>
+
+      <p>Still, after living deep in the weeds of club operations, working in the software space for years, and being the person who pushes the tools hardest, I’ve come to believe some components would make a genuinely stable foundation.</p>
+
+      <p>One caveat up front: what I would have proposed a year or two ago looks very different from what I’d propose today. AI has changed what’s possible faster than anything I’ve seen in software. So treat the diagram and ideas here as a snapshot. They’ll change as the technology improves, as I learn what works and what doesn’t, and as the market’s demands shift. But I think it’s a good start.</p>
+
+      <h2>Where this comes from</h2>
+
+      <p>I came to youth club operations from software, after years in marketing operations at SaaS companies and a decade coaching high school soccer on the side. When I joined a large competitive club, I found what most clubs live with: a registration platform at the center and a patchwork of spreadsheets, forms, and side tools around it.</p>
+
+      <p>Every time staff needed something the platform couldn’t do, we built around it. A nightly data pipeline to get our own data out. A mapping file to match league team names to our team names. Dashboards for registration pacing, retention, and revenue. A coach game-report form. A private training booking app. Dozens of small AI automations that do the clicking for us, from updating game uniforms to setting up payment plans.</p>
+
+      <p>At some point I realized that collection of workarounds was a spec. Each one marks a place where clubs need something the software doesn’t give them. Line them up and a picture of the platform clubs actually need starts to emerge.</p>
+
+      <h2>The problem is foundations, not features</h2>
+
+      <p>When I sorted the workarounds by why they exist, the same few root causes kept showing up. Very few were about a missing feature. Most were about the foundation underneath.</p>
+
+      <ul>
+        <li><strong>The data is locked in.</strong> Clubs can see their data in the app but often can’t get it out, automate it, or connect it to anything else.</li>
+        <li><strong>Nothing shares an identity.</strong> A team has one name in the league system and another in the club’s. A coach has a different record in every tool. Mapping spreadsheets end up as the glue.</li>
+        <li><strong>The club’s own structure isn’t built in.</strong> Region, program, and cohort live inside team names instead of as real fields, so every report has to rebuild them.</li>
+        <li><strong>History gets overwritten.</strong> Move a player to a new roster and the original registration date can disappear. Closed seasons get archived by hand.</li>
+        <li><strong>Bulk work happens one click at a time.</strong> Anything that touches hundreds of games or packages becomes an afternoon of clicking.</li>
+        <li><strong>Staff operations live elsewhere.</strong> Practice schedules, shifts, payroll, and private training each sit in a different place.</li>
+        <li><strong>Growth has no home.</strong> Leads, town partnerships, alumni, and the questions families ask all live outside the system that runs the club.</li>
+      </ul>
+
+      <p>Fix those, and a lot of features become easy. Leave them, and every new feature becomes another island.</p>
+
+      <h2>The foundation: an open club data core</h2>
+
+      <p>The heart of the platform I keep sketching is a data core that models a club the way a club actually works, and stays open to everything around it.</p>
+
+      <p>It starts with people, because clubs are people businesses:</p>
+
+      <ul>
+        <li><strong>Household</strong> is the account: billing, address, hometown. It plays the role a company plays in business software.</li>
+        <li><strong>Guardians</strong> are the contacts who get messages and make payments. A household can have more than one.</li>
+        <li><strong>Players</strong> are often minors without their own email. A player can be on several teams at once (a club team, a training group, a guest spot) and carries a full history across seasons.</li>
+        <li><strong>Coaches</strong> have one staff record and one ID that every tool recognizes.</li>
+      </ul>
+
+      <p>Then the club’s structure: <strong>teams</strong> linked to the names leagues use for them, <strong>programs</strong> with real categories, regions and pricing, and <strong>seasons</strong> that are kept as a snapshot when they close.</p>
+
+      <p>Two ideas make this work. First, one person can hold many roles. A parent might also coach or volunteer, and a player might grow into an alumni or a staff member. One record with many roles prevents the duplicates that make club data so messy. Second, the core is open by default, with an API, webhooks, Zapier support, and an MCP server so AI tools can work with it directly. A club’s data should be as easy to use as it is to collect.</p>
+
+      <p>Scott Brinker makes this case well in <a href="https://newsletter.chiefmartec.com/p/the-saas-moats-are-crumbling-but-the-opportunity-is-bigger">The SaaS moats are crumbling, but the opportunity is bigger</a>. He argues that features, interfaces, and data lock-in are all weaker defenses than they used to be:</p>
+
+      <blockquote>
+        <p>This doesn’t mean data is irrelevant. But data alone is a weak moat when every application in the stack is reading from and writing to the same cloud data layer. If your primary value proposition is “we hold your data,” you’re in trouble, because your customers’ data teams are already busy consolidating that data somewhere you don’t control.</p>
+      </blockquote>
+
+      <p>That rings true for club software. A platform that keeps a club’s data behind manual exports isn’t protecting much. It just pushes the club to build pipelines around it, which is exactly what I ended up doing. Brinker sees the bigger opportunity in context: the domain knowledge, rules, and operating logic that let people and AI agents act well. For a club platform, that means understanding how a club actually runs, from registration windows and tryout timing to how a player moves up a pathway. That’s worth building on, and it becomes more valuable the more open the data around it is.</p>
+
+      <h2>What sits on top</h2>
+    </article>
+
+    <!-- Architecture diagram, redrawn from the "Club data core architecture" whiteboard. Plain HTML and CSS, styles under .arch in style.css. -->
+    <figure class="arch" aria-labelledby="arch-caption">
+      <div class="arch-row arch-people">
+        <div class="arch-box">Families</div>
+        <div class="arch-box">Coaches</div>
+        <div class="arch-box">Directors and admin</div>
+      </div>
+      <div class="arch-link" aria-hidden="true">&darr;</div>
+      <div class="arch-ai">
+        <strong>AI operations layer</strong>
+        <span>Daily ops digest, natural-language setup, bulk actions as saved recipes</span>
+      </div>
+      <div class="arch-link"><span aria-hidden="true">&darr;</span> acts across every module</div>
+      <div class="arch-group">
+        <span class="label">Modules</span>
+        <ul class="arch-modules">
+          <li>Programs and registration</li>
+          <li>Schedules, games</li>
+          <li>Staff operations</li>
+          <li>Coach game reports</li>
+          <li>Bookable services</li>
+          <li>Reporting</li>
+          <li>Growth and CRM</li>
+          <li>Family help</li>
+          <li>Events and camps</li>
+          <li>Player development</li>
+          <li>Marketing website</li>
+          <li>Team health</li>
+          <li>Subscription programs</li>
+          <li>Coach development</li>
+          <li>Facilities</li>
+        </ul>
+      </div>
+      <div class="arch-link"><span aria-hidden="true">&uarr;&darr;</span> every module reads and writes here</div>
+      <div class="arch-group arch-core">
+        <span class="label">Club data core</span>
+        <p class="arch-core-lead">Linked family, player, team, program and season records, stable IDs, a league crosswalk that matches league team names to platform team names, and season snapshots. <strong>Open access: API, webhooks, Zapier, MCP.</strong></p>
+        <ul class="arch-entities">
+          <li><strong>Household</strong>The account: billing, address, hometown</li>
+          <li><strong>Guardian</strong>The contact who gets messages and pays</li>
+          <li><strong>Player</strong>On many teams at once, with full history</li>
+          <li><strong>Coach</strong>One staff ID across every tool</li>
+          <li><strong>Team</strong>Linked to its league team names</li>
+          <li><strong>Program</strong>Category, region, price, packages</li>
+          <li><strong>Season</strong>Snapshot kept when it closes</li>
+        </ul>
+        <p class="arch-note">One person record can hold many roles: a guardian may also coach or volunteer, and a player can become alumni or staff.</p>
+      </div>
+      <div class="arch-link" aria-hidden="true">&darr;</div>
+      <div class="arch-row arch-outside">
+        <div class="arch-box">League platforms<span>GotSport, ECNL</span></div>
+        <div class="arch-box">Staffing and payroll<span>Connecteam, payroll</span></div>
+        <div class="arch-box">CRM<span>HubSpot</span></div>
+        <div class="arch-box">AI tools<span>via MCP</span></div>
+      </div>
+      <figcaption id="arch-caption">Club data core architecture: every module sits on one open club data core.</figcaption>
+    </figure>
+
+    <article class="article essay essay-cont">
+      <p>The diagram reads top to bottom. Families, coaches and staff work through an AI operations layer. Below that sit the modules, and every module reads from and writes to the same data core. The core stays open to the systems around it: league platforms, staffing and payroll tools, a CRM, and AI tools.</p>
+
+      <p>The modules fall into a few groups:</p>
+
+      <ul>
+        <li><strong>Running the season:</strong> programs and registration, subscription programs, schedules and games, events and camps, and facilities.</li>
+        <li><strong>Supporting staff and coaches:</strong> staff operations, coach game reports, coach development, and bookable services like private training.</li>
+        <li><strong>Developing players and keeping families:</strong> player development, team health, and family help.</li>
+        <li><strong>Growing the club:</strong> growth and CRM, the marketing website, and reporting across all of it.</li>
+      </ul>
+
+      <p>None of these is exotic. What changes is that they share one foundation instead of each keeping its own copy of the truth. A program’s website page builds itself from the program record. A team health score draws on attendance, family feedback, and coach game reports without anyone exporting a file. A retention report can tell a player who left from a player who moved up to a higher team.</p>
+
+      <h2>What AI changed</h2>
+
+      <p>Two years ago, my version of this would have been a long list of features and integrations, mostly about getting data out of one place and into another. AI has shifted where the value sits.</p>
+
+      <p><strong>The interface is becoming a conversation.</strong> In most tools I use now, the fastest way to get something done is to describe it. One morning I asked an AI assistant to pull data from our database and our CRM, combine it into a sheet our directors could use, and log the result in our project management tool, all in one chat. Club staff will expect the same from their club platform: “Create a futsal program for these dates, ages and prices,” and it happens. Families will expect the same as well: “When and where is Julie’s game on Sunday, oh, and what uniform do we need to pack?”</p>
+
+      <p><strong>Bulk work becomes a saved recipe.</strong> The clicking that eats staff afternoons, like updating uniforms across 200 games or applying new payment plans to 40 packages, can be described once and run again whenever it’s needed.</p>
+
+      <p><strong>The data core matters more, not less.</strong> AI is only as good as the context it can reach. A platform with clean, linked, open data gives an assistant something to work with. A closed one leaves the club copying and pasting.</p>
+
+      <p><strong>The question is whether to build the assistant in or open the doors.</strong> I think the answer is both: an assistant inside the product, tuned to how clubs work, for most staff, and open connections like MCP for clubs that already run their work through their own AI tools.</p>
+
+      <h2>One system or two? Thinking out loud</h2>
+
+      <p>One question I keep going back and forth on: where should a family’s relationship with the club live before they register?</p>
+
+      <p>Today at some clubs, a CRM is the system of record while a family is just interested: they fill out an inquiry form, get follow-up emails, maybe talk with a director. Once they register for a tryout or a program, the club management platform takes over. The handoff between the two is usually manual, one-way or overnight, so nobody has the full picture of a family from first click to fifth season.</p>
+
+      <p>There’s a real case for putting it all in one system. One record from first inquiry to alumni. Lead source, conversion, retention, and lifetime value in a single report. Nothing to reconcile, and one place for staff to look.</p>
+
+      <p>There’s also a real case for keeping a dedicated CRM. Marketing automation, email and lead scoring are hard to do well, and club platforms tend to treat them as an afterthought.</p>
+
+      <p>Where I’ve landed for now is to split it by job, not by stage. The data core should own identity from the very first touch: an inquiry creates the household and player record, with a stable ID and a lifecycle stage, before anyone registers. The CRM, built in or connected, owns engagement: sequences, scoring and campaigns. And the two should stay in sync through events as they happen (registered, assigned to a team, missed a payment, didn’t return) rather than through a file at 2 a.m. Two systems were never the real problem. The real problem was two identities and a slow, one-way handoff between them.</p>
+
+      <h2>Principles that matter more than features</h2>
+
+      <p>These come from lessons learned building tools and I think should shape every module:</p>
+
+      <ul>
+        <li><strong>Keep things simple for families and handle the complexity behind the scenes.</strong> Parents should book, register, and pay in a few steps. The hard parts belong on the admin side.</li>
+        <li><strong>Meet staff where they are.</strong> Lots of club coaches are part-time and use personal email. Many directors aren’t technical. Tools have to work for all of them.</li>
+        <li><strong>Show the math.</strong> Every number on a dashboard should open to the records behind it. People trust what they can check.</li>
+        <li><strong>Never surprise people.</strong> Automations shouldn’t overwrite what someone entered by hand or message families without a person deciding to.</li>
+        <li><strong>Flag, don’t guess.</strong> When data doesn’t match, surface it for a person to resolve instead of quietly picking an answer.</li>
+        <li><strong>Keep the history.</strong> Original registration dates, closed seasons, and past rosters are what make retention and development tracking possible.</li>
+        <li><strong>Adoption is the hard part.</strong> A system only one person uses has failed, however good it is. Getting the tools right is easier than getting people to change how they work.</li>
+      </ul>
+
+      <h2>A starting point</h2>
+
+      <p>I fully expect parts of this to look naive in a year, as AI keeps moving, as I learn which ideas hold up, and as clubs and the market ask for things none of us can see yet.</p>
+
+      <p>What I’m more confident about is the direction: club software should treat a club’s data as the club’s, model the club the way it actually runs, stay open to the tools around it, and take busywork off staff so they can spend their time on players and families.</p>
+
+      <p>If you run a club, build software for clubs or just think about this stuff, I’d love to compare notes.</p>
+
+      <p><a class="back" href="/writing/">&larr; All writing</a></p>
+    </article>
+
+  </main>
+
+  <!-- Footer: the same on every page. If you change it, change it on every page. -->
+  <footer class="site-footer" id="contact">
+    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
+    <div class="contact-links">
+      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
+      <a href="https://www.linkedin.com/in/davecriswell/">LinkedIn</a>
+    </div>
+    <div class="fine-print">
+      <span>&copy; 2026 Dave Criswell</span>
+      <span>Built with Claude Code</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
