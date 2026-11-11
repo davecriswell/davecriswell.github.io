@@ -4,31 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A dashboard that can show its math · Dave Criswell</title>
-  <meta name="description" content="Why I rebuilt a registration dashboard that looked finished but couldn't explain its own numbers.">
+  <meta name="description" content="Why I rebuilt a registration dashboard that looked finished but couldn&#x27;t explain its own numbers.">
+  <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 
+  <!-- Header: the same on every page. If you change it, change it on every page. -->
   <header class="site-header">
-    <a class="brand" href="../index.html">
+    <a class="brand" href="/">
       <span class="brand-name">Dave Criswell</span>
       <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
     </a>
     <nav class="site-nav" aria-label="Main">
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#ai">AI in operations</a>
-      <a href="../index.html#writing">Writing</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="/work/">Work</a>
+      <a href="/playbook/">Playbook &amp; AI</a>
+      <a href="/about/">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="article">
-    <a class="back" href="../index.html#writing">&larr; All writing</a>
-    <span class="label" style="margin-top:24px">Reporting<span class="draft-tag">Draft</span></span>
+  <main id="main">
+    <article class="article">
+    <a class="back" href="/writing/">&larr; All writing</a>
+    <span class="label">Reporting<span class="draft-tag">Draft</span></span>
     <h1>A dashboard that can show its math</h1>
 
     <p class="draft-note">This is a first draft written from my notes, as a starting point. I&rsquo;ll rewrite it in my own words before it goes live.</p>
@@ -56,12 +60,22 @@
     <p>The first version wasn&rsquo;t a mistake. It showed what people actually wanted to look at, which is a useful thing to learn early. But &ldquo;looks finished&rdquo; and &ldquo;is finished&rdquo; are different, and in reporting the difference is whether you can show your math.</p>
     <p>Now I ask three questions before calling a report done: Can someone else change it? Does it tie back to the source? Can it explain any number it shows?</p>
 
-    <p><a class="back" href="../index.html#writing">&larr; Back to all writing</a></p>
+    <p><a class="back" href="/writing/">&larr; Back to all writing</a></p>
+  </article>
+
   </main>
 
-  <footer class="site-footer">
-    <span>&copy; 2026 Dave Criswell</span>
-    <span>Built with Claude Code</span>
+  <!-- Footer: the same on every page. If you change it, change it on every page. -->
+  <footer class="site-footer" id="contact">
+    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
+    <div class="contact-links">
+      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
+      <a href="https://www.linkedin.com/in/davecriswell/">LinkedIn</a>
+    </div>
+    <div class="fine-print">
+      <span>&copy; 2026 Dave Criswell</span>
+      <span>Built with Claude Code</span>
+    </div>
   </footer>
 
 </div>

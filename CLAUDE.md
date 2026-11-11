@@ -5,27 +5,59 @@ Dave is new to development and uses this project to learn Claude Code and GitHub
 
 ## Files
 GitHub Pages publishes only the `docs/` folder. Files outside it (like this one) stay off the website but are still public on github.com.
-- `docs/index.html` is the home page. All sections live here.
-- `docs/style.css` holds every style. Colors and fonts are tokens at the top in `:root`.
-- `docs/writing/` holds one HTML page per essay. Each links `../style.css`.
+
+| Page | File | URL |
+| --- | --- | --- |
+| Home | `docs/index.html` | `/` |
+| Work | `docs/work/index.html` | `/work/` |
+| Playbook & AI | `docs/playbook/index.html` | `/playbook/` |
+| About | `docs/about/index.html` | `/about/` |
+| Writing (not linked yet) | `docs/writing/index.html` | `/writing/` |
+| Essay (not linked yet) | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
+
+- `docs/style.css` holds every style. Colors, fonts, and status-badge colors are tokens at the top in `:root`.
+- Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
+- **The header and footer are repeated on every page.** If you change one, change it on all six pages.
+- Menu: Work · Playbook & AI · About · Contact. Contact jumps to the footer (`#contact`) on the current page.
+- Each case study has an anchor so one example can be shared: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
 
 ## Positioning
-"I build the systems underneath revenue: the CRM, the data, the automation, and the reporting that tells you what's actually working."
+"I build the systems underneath revenue and operations: the CRM, the data, the automation, and the reporting that tells you what's actually working."
 Audience: potential employers and partners. They should understand what Dave does and who he is as a person.
 
 ## Voice
-First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. Case studies use three parts: The problem, What I built, The result. Write them from a go-to-market lens: what changed for revenue, the team's capacity, or the customer experience.
+First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. **No em dashes.**
+
+## Case study formats
+- **Club:** The problem / What I built / What it changes / Where it stands / Tools, with a status badge beside the title.
+- **Software (TrainingPeaks, Rafflecopter):** The project (or approach) / What it took (or built) / The result. These results are verified.
+- **Status badges** (`<span class="badge" data-status="...">`):
+
+| Badge | data-status | Meaning |
+| --- | --- | --- |
+| Live | `live` | In regular use |
+| Automated | `auto` | Runs on a schedule or as a saved skill, with no manual steps |
+| Partly automated | `partial` | Some steps run on their own, the rest are still manual |
+| Testing | `testing` | Built, being checked against the source data before people rely on it |
+| Pilot | `pilot` | Running with one team, region, or person while it's tested |
+| Ready to roll out | `ready` | Built and tested end to end, rollout not started |
 
 ## Design
-Inspired by m3ka.com (warm off-white, serif headings, mono labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now. No photo yet.
+Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now.
+
+## Open items
+- **About photo:** the About page has a placeholder slot. To add the photo, save it as `docs/images/dave.jpg` and replace the placeholder `<div>` (instructions are in a comment in `docs/about/index.html`). Ideally outdoors on a run or ride.
+- **Writing:** the Writing page and essay are built but not linked, and marked `noindex`. Once Dave rewrites the essay in his own words: remove the draft note and `noindex`, link it from the pacing case study on the Work page ("Read the story behind the rebuild →"), and add Writing to the menu on every page.
+- **Optional:** a short Avid4 Adventure or Bonusly case study to cover 2017 to 2023.
 
 ## Public-content rules (this repository is public)
 - Name "Select Soccer Club" only in the Experience section, plus the "Select Playbook" by name. Everywhere else, say "the club" or "a youth soccer club."
 - Playbook counts are approved for public use: 63 plays, 6 areas, 10 run as skills.
 - Call the registration platform "the club's registration platform." Don't name it.
 - No colleague, staff, coach, family, or player names.
-- No revenue, staff counts, internal metrics, pacing or retention figures, or vendor-selection details.
-- No phone number, home address, or location.
-- Keep the contact wording neutral.
+- No revenue, staff counts, internal metrics, pacing or retention figures, or vendor-selection details (for example, how many CRMs were evaluated).
+- No phone number, home address, or location. Running and riding copy says "the roads and trails near home."
+- Status lines describe the work, never the people who did or didn't use it.
+- Keep the contact wording neutral. Nothing that suggests a job search.
 - Only publish projects and past work that the private brief marks as public-safe. Ask Dave before adding anything else.
 - The private source brief lives in Dave's Google Drive ("dave-criswell-website-brief.md"). Never copy it into this repository.
