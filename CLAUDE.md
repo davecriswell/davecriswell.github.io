@@ -19,19 +19,25 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
 - **The header and footer are repeated on every page.** If you change one, change it on all six pages.
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
-- The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide). To change it, replace that file.
+- The About photo is `docs/images/dave.jpg` (880 x 1100, cropped so no bystanders are in frame). To change it, replace that file.
 - Menu: Work · Playbook & AI · About · Contact. Contact jumps to the footer (`#contact`) on the current page.
-- Each case study has an anchor so one example can be shared: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
+- Each case study has an anchor so one example can be linked directly: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
+
+## Page structure
+- **Home:** intro, Selected work, How I work.
+- **Work:** case studies, Select first, then earlier software work.
+- **Playbook & AI:** the Select Playbook and the Claude workspace behind it.
+- **About:** bio, Experience, Kind words, Outside work, closing quote.
 
 ## Positioning
 "I build the systems underneath revenue and operations: the CRM, the data, the automation, and the reporting that tells you what's actually working."
-Audience: potential employers and partners. They should understand what Dave does and who he is as a person.
+The site is a record of how Dave works and what he's learning: the systems he's built, the principles behind them, and his thinking on practical AI. A reader should come away understanding what he does and who he is as a person.
 
 ## Voice
 First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. **No em dashes.**
 
 ## Case study formats
-- **Club:** The problem / What I built / What it changes / Built to hold up / Tools, with a status badge beside the title.
+- **Select:** The problem / What I built / What it changes / Built to hold up / Tools, with a status badge beside the title.
   - "Built to hold up" describes lasting design choices (safeguards, rules, structure), not progress, so it shouldn't need updating as projects change. Don't add progress or "where it stands" lines back.
 - **Software (TrainingPeaks, Rafflecopter):** The project (or approach) / What it took (or built) / The result. These results are verified.
 - **Status badges** (`<span class="badge" data-status="...">`). Only three, so they change only when a project moves to a new stage:
@@ -47,16 +53,21 @@ Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, t
 
 ## Open items
 - **Writing:** the Writing page and essay are built but not linked, and marked `noindex`. Once Dave rewrites the essay in his own words: remove the draft note and `noindex`, link it from the pacing case study on the Work page ("Read the story behind the rebuild →"), and add Writing to the menu on every page.
+- **Custom domain:** move the site to davecriswell.com (see "Custom domain" below).
 - **Optional:** a short Avid4 Adventure or Bonusly case study to cover 2017 to 2023.
 
+## Custom domain
+- `docs/CNAME` holds the domain (one line: `davecriswell.com`). GitHub Pages reads it from the publishing folder.
+- The domain is also set in the repository's Settings → Pages, with "Enforce HTTPS" on, and verified under the account's Pages settings.
+- Old github.io links redirect to the custom domain automatically.
+
 ## Public-content rules (this repository is public)
-- Name "Select Soccer Club" only in the Experience section, plus the "Select Playbook" by name. Everywhere else, say "the club" or "a youth soccer club."
+- Select Soccer Club can be named. Write about Select with respect: describe challenges as the natural ones of a growing club, and credit the club for the work it supported. Never criticize people or the club.
 - Playbook counts are approved for public use: 63 plays, 6 areas, 10 run as skills.
 - Call the registration platform "the club's registration platform." Don't name it.
 - No colleague, staff, coach, family, or player names.
 - No revenue, staff counts, internal metrics, pacing or retention figures, or vendor-selection details (for example, how many CRMs were evaluated).
 - No phone number, home address, or location. Running and riding copy says "the roads and trails near home."
 - Badges and "Built to hold up" lines describe the work, never the people who did or didn't use it.
-- Keep the contact wording neutral. Nothing that suggests a job search.
-- Only publish projects and past work that the private brief marks as public-safe. Ask Dave before adding anything else.
-- The private source brief lives in Dave's Google Drive ("dave-criswell-website-brief.md"). Never copy it into this repository.
+- Keep the closing line as it is: an open invitation to talk systems, operations, practical AI, or youth sports.
+- Only publish projects and past work Dave has approved for public use. Ask Dave before adding anything else.
