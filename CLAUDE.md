@@ -3,6 +3,9 @@
 Dave Criswell's personal website. Plain HTML and CSS, no build step, hosted on GitHub Pages.
 Dave is new to development and uses this project to learn Claude Code and GitHub, so explain changes in plain language.
 
+## Before changing anything
+Dave sometimes edits files directly on GitHub, so GitHub may be ahead of this copy. At the start of every task, before editing any file, pull the latest version: `git pull origin main`. If the pull brings in new commits, look at what changed and mention it to Dave, so his edits aren't overwritten or undone.
+
 ## Files
 GitHub Pages publishes only the `docs/` folder. Files outside it (like this one) stay off the website but are still public on github.com.
 
