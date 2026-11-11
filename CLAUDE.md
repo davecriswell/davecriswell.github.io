@@ -14,7 +14,7 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 | About | `docs/about/index.html` | `/about/` |
 | Writing | `docs/writing/index.html` | `/writing/` |
 | Essay: The Club Platform I Keep Sketching | `docs/writing/the-club-platform-i-keep-sketching.html` | |
-| Essay: A dashboard that can show its math | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
+| Essay: A Dashboard That Can Show Its Math | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
 
 - `docs/style.css` holds every style. Colors, fonts, and status-badge colors are tokens at the top in `:root`.
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
@@ -53,6 +53,7 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 - Essays live in `docs/writing/`, one HTML file each, named from the title (`the-club-platform-i-keep-sketching.html`).
 - To add one: copy an existing essay page, replace the content inside `<article class="article essay">`, update the `<title>` and meta description, then add a `<li>` to the top of the list in `docs/writing/index.html` (newest first: label with topic and month, title, one-sentence summary).
 - Dates show month and year only ("November 2026"), on the essay page and in the Writing list. No exact days.
+- Essay titles capitalize every major word (title case). Case study titles on the Work page stay in sentence case.
 - Essays keep Dave's wording. Only fix what he asks for, plus em dashes (none allowed). A diagram from a private artifact gets redrawn on the page, since visitors can't open his artifacts.
 - The architecture diagram in "The Club Platform I Keep Sketching" is plain HTML and CSS (`.arch` styles in `style.css`), redrawn from Dave's "Club data core architecture" whiteboard.
 
