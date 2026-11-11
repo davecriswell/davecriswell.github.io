@@ -14,11 +14,11 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 | About | `docs/about/index.html` | `/about/` |
 | Writing | `docs/writing/index.html` | `/writing/` |
 | Essay: The Club Platform I Keep Sketching | `docs/writing/the-club-platform-i-keep-sketching.html` | |
-| Draft essay (unlisted, `noindex`) | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
+| Essay: A dashboard that can show its math | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
 
 - `docs/style.css` holds every style. Colors, fonts, and status-badge colors are tokens at the top in `:root`.
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
-- **The header and footer are repeated on every page.** If you change one, change it on every page (seven so far, counting each essay).
+- **The header and footer are repeated on every page.** If you change one, change it on every page (seven pages, counting each essay).
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
 - The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide on desktop, 220px on phones). To change it, replace that file and update the `width`/`height` on its `<img>` tag in `docs/about/index.html`.
 - Menu: Work · Playbook & AI · Writing · About · Contact. Contact jumps to the footer (`#contact`) on the current page. On narrow phones the menu wraps to two lines; the phone `scroll-margin-top` allows for that.
@@ -52,6 +52,7 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 ## Writing
 - Essays live in `docs/writing/`, one HTML file each, named from the title (`the-club-platform-i-keep-sketching.html`).
 - To add one: copy an existing essay page, replace the content inside `<article class="article essay">`, update the `<title>` and meta description, then add a `<li>` to the top of the list in `docs/writing/index.html` (newest first: label with topic and month, title, one-sentence summary).
+- Dates show month and year only ("November 2026"), on the essay page and in the Writing list. No exact days.
 - Essays keep Dave's wording. Only fix what he asks for, plus em dashes (none allowed). A diagram from a private artifact gets redrawn on the page, since visitors can't open his artifacts.
 - The architecture diagram in "The Club Platform I Keep Sketching" is plain HTML and CSS (`.arch` styles in `style.css`), redrawn from Dave's "Club data core architecture" whiteboard.
 
@@ -59,7 +60,6 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now.
 
 ## Open items
-- **Draft essay:** "A dashboard that can show its math" is built but unlisted and `noindex`. Once Dave rewrites it in his own words: remove the draft note and `noindex`, add it to the Writing list, and link it from the pacing case study on the Work page ("Read the story behind the rebuild →").
 - **Custom domain:** move the site to davecriswell.com (see "Custom domain" below).
 - **Optional:** a short Avid4 Adventure or Bonusly case study to cover 2017 to 2023.
 

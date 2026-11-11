@@ -269,6 +269,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 .tools { margin: 24px 0 0; font-size: 14px; color: var(--ink-soft); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
 .tools .label { display: inline; color: var(--accent); }
+.tools a { color: var(--accent); font-size: 15px; text-underline-offset: 3px; }
 
 /* ---------- Playbook: anatomy, sample play, skills, loop ---------- */
 
