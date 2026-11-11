@@ -31,18 +31,16 @@ Audience: potential employers and partners. They should understand what Dave doe
 First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. **No em dashes.**
 
 ## Case study formats
-- **Club:** The problem / What I built / What it changes / Where it stands / Tools, with a status badge beside the title.
+- **Club:** The problem / What I built / What it changes / Built to hold up / Tools, with a status badge beside the title.
+  - "Built to hold up" describes lasting design choices (safeguards, rules, structure), not progress, so it shouldn't need updating as projects change. Don't add progress or "where it stands" lines back.
 - **Software (TrainingPeaks, Rafflecopter):** The project (or approach) / What it took (or built) / The result. These results are verified.
-- **Status badges** (`<span class="badge" data-status="...">`):
+- **Status badges** (`<span class="badge" data-status="...">`). Only three, so they change only when a project moves to a new stage:
 
 | Badge | data-status | Meaning |
 | --- | --- | --- |
 | Live | `live` | In regular use |
-| Automated | `auto` | Runs on a schedule or as a saved skill, with no manual steps |
-| Partly automated | `partial` | Some steps run on their own, the rest are still manual |
-| Testing | `testing` | Built, being checked against the source data before people rely on it |
-| Pilot | `pilot` | Running with one team, region, or person while it's tested |
-| Ready to roll out | `ready` | Built and tested end to end, rollout not started |
+| Partly automated | `partial` | In use; some steps run on their own, the rest are still manual |
+| In development | `dev` | Still being built or tested |
 
 ## Design
 Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now.
@@ -58,7 +56,7 @@ Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, t
 - No colleague, staff, coach, family, or player names.
 - No revenue, staff counts, internal metrics, pacing or retention figures, or vendor-selection details (for example, how many CRMs were evaluated).
 - No phone number, home address, or location. Running and riding copy says "the roads and trails near home."
-- Status lines describe the work, never the people who did or didn't use it.
+- Badges and "Built to hold up" lines describe the work, never the people who did or didn't use it.
 - Keep the contact wording neutral. Nothing that suggests a job search.
 - Only publish projects and past work that the private brief marks as public-safe. Ask Dave before adding anything else.
 - The private source brief lives in Dave's Google Drive ("dave-criswell-website-brief.md"). Never copy it into this repository.

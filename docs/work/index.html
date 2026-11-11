@@ -32,7 +32,7 @@
 
     <section class="page-intro">
       <h1>Work</h1>
-      <p class="lede">I’m most useful where a function is being built, or where an existing one needs to work better. Each example covers the problem, what I built, and what it changes. The club examples also say where they stand. Some run every week, and some are built and waiting for the right moment to roll out. I’d rather tell you exactly where something is than round it up.</p>
+      <p class="lede">I’m most useful where a function is being built, or where an existing one needs to work better. Each example covers the problem, what I built, and what it changes. The club examples also say what makes them hold up, and a badge shows their stage. Some run every week, and some are still being built. I’d rather tell you exactly where something is than round it up.</p>
     </section>
 
     <section class="section" id="at-the-club">
@@ -49,7 +49,7 @@
           <div><dt>The problem</dt><dd>Every report and internal tool needed data that was locked inside the club’s registration platform, which has no API or MCP connection. Player, roster, and subscription data lived in manual exports, so every number depended on whoever had last downloaded a CSV.</dd></div>
           <div><dt>What I built</dt><dd>A pipeline that moves scheduled exports into cloud storage and feeds an Airtable base, which serves as the club’s data layer. Records match on stable IDs, so each update lands on the right player and nothing is duplicated or lost.</dd></div>
           <div><dt>What it changes</dt><dd>Reports, dashboards, and internal apps can build on one trusted source, instead of each one starting from another downloaded spreadsheet.</dd></div>
-          <div><dt>Where it stands</dt><dd>Exports, storage, and matching into the data layer run on a schedule. The last loop, writing updates back automatically, is still in progress.</dd></div>
+          <div><dt>Built to hold up</dt><dd>Records match on stable IDs and are only ever updated or created, never deleted, so one bad export can’t wipe out good data. Every step runs on a schedule, so the data doesn’t depend on someone remembering to download it.</dd></div>
         </dl>
         <p class="tools"><span class="label">Tools</span>Google Cloud Run · Cloud Scheduler · Cloud Storage · Google Drive · Airtable · Zapier</p>
       </article>
@@ -64,7 +64,7 @@
           <div><dt>The problem</dt><dd>Families reached out through several channels, with no consistent way to qualify them, route them, log the conversation, or follow up. In peak season, inquiries outpaced what the team could handle, so good leads went cold.</dd></div>
           <div><dt>What I built</dt><dd>A documented lead-to-enrollment workflow in HubSpot: intake from every channel, a qualification layer, routing by region, and follow-up sequences triggered by each prospect’s digital signals. Before building anything, I mapped how inquiries actually arrived and wrote the business case for the CRM.</dd></div>
           <div><dt>What it changes</dt><dd>No inquiry depends on someone remembering to follow up. Every prospect gets a prompt first response, then timely touchpoints based on what they’ve shown interest in.</dd></div>
-          <div><dt>Where it stands</dt><dd>Intake, routing, and qualification run automatically up to the sales-qualified stage. Moving a family to enrolled is still a manual step.</dd></div>
+          <div><dt>Built to hold up</dt><dd>The whole workflow is documented, from first inquiry to enrolled, so anyone can see how an inquiry moves and who owns each step. Routing is set by region, so adding a person or a region means updating a rule, not rebuilding the funnel.</dd></div>
         </dl>
         <p class="tools"><span class="label">Tools</span>HubSpot · Zapier</p>
       </article>
@@ -72,14 +72,14 @@
       <article class="case" id="shift-imports">
         <header class="case-head">
           <h3>From schedule PDFs to payroll-ready shifts</h3>
-          <span class="badge" data-status="auto">Automated</span>
+          <span class="badge" data-status="live">Live</span>
         </header>
         <p class="case-line">Schedules in any format become accurate shifts in a fraction of the time.</p>
         <dl class="case-body">
           <div><dt>The problem</dt><dd>Entering hourly staff schedules into the club’s scheduling platform by hand took a lot of time. Schedules arrived as screenshots, PDFs, and spreadsheets, and retyping them invited mistakes that could follow through to payroll.</dd></div>
           <div><dt>What I built</dt><dd>A repeatable process that turns a schedule in any format into a shift import, building accurate shifts from the rules for each type of job. Before payroll, a report flags differences between scheduled and worked hours so they get fixed first.</dd></div>
           <div><dt>What it changes</dt><dd>Schedule entry takes a small fraction of the time it used to, and mismatches surface before payroll instead of after it.</dd></div>
-          <div><dt>Where it stands</dt><dd>Runs as two saved skills, one for the shift import and one for the pre-payroll exception report.</dd></div>
+          <div><dt>Built to hold up</dt><dd>The rules live in one place (setup time, game lengths by age group, how each job type becomes a shift), so a new season means changing a rule, not retyping a schedule. An overlap check and a shared vocabulary for regions and programs keep every import consistent, and the pre-payroll report catches anything that slips through.</dd></div>
         </dl>
         <p class="tools"><span class="label">Tools</span>Connecteam · Google Sheets · Python · Claude</p>
       </article>
@@ -94,7 +94,7 @@
           <div><dt>The problem</dt><dd>Directors had no consistent way to hear from coaches about weekend games: what happened, whether results were entered, and which concerns needed a follow-up. Getting answers meant a lot of back-and-forth.</dd></div>
           <div><dt>What I built</dt><dd>A weekly sync that builds one list of fixtures from every league the club plays in. Coaches pick their game from a simple form and file one report. Directors get a prioritized follow-up queue, with serious incidents at the top, and can nudge everyone who hasn’t filed with one click.</dd></div>
           <div><dt>What it changes</dt><dd>Instead of chasing updates, a director starts the week with a short list of what needs attention, so issues get handled sooner.</dd></div>
-          <div><dt>Where it stands</dt><dd>Built and tested end to end: fixture sync, coach form, and director queue.</dd></div>
+          <div><dt>Built to hold up</dt><dd>A game keeps its report even when it’s rescheduled, and the sync refuses to run if a league’s data suddenly shrinks. Reports are only ever added, never overwritten, and it runs on Google Sheets because that’s where staff already work.</dd></div>
         </dl>
         <p class="tools"><span class="label">Tools</span>Google Sheets · Apps Script · Zapier · ClickUp</p>
       </article>
@@ -102,14 +102,14 @@
       <article class="case" id="pacing-dashboard">
         <header class="case-head">
           <h3>A dashboard that can show its math</h3>
-          <span class="badge" data-status="testing">Testing</span>
+          <span class="badge" data-status="dev">In development</span>
         </header>
         <p class="case-line">Year-over-year registration pacing that can explain every number it shows.</p>
         <dl class="case-body">
           <div><dt>The problem</dt><dd>Leadership used a registration pacing dashboard to see whether the club was ahead of or behind last year. But you had to understand the data underneath it to trust what it was saying.</dd></div>
           <div><dt>What I built</dt><dd>A rebuild that compares rostered players by program, region, gender, and age group against the same date last year, with a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases history.</dd></div>
           <div><dt>What it changes</dt><dd>When a number looks off, anyone can trace it back to the rows behind it, and last season’s history survives every refresh.</dd></div>
-          <div><dt>Where it stands</dt><dd>Built and testing.</dd></div>
+          <div><dt>Built to hold up</dt><dd>Every number ties back to a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases the history the comparison depends on, and a new season starts by uploading the latest export.</dd></div>
         </dl>
       </article>
     </section>

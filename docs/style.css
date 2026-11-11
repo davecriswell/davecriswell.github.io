@@ -21,6 +21,7 @@
   --st-testing: #4a6d8c;
   --st-pilot: #7a5c8c;
   --st-ready: #6b7a3a;
+  --st-dev: #4a6d8c;
 
   --serif: "Newsreader", Georgia, serif;
   --sans: "Inter", Arial, sans-serif;
@@ -176,6 +177,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .badge[data-status="testing"]::before { background: var(--st-testing); }
 .badge[data-status="pilot"]::before { background: var(--st-pilot); }
 .badge[data-status="ready"]::before { background: var(--st-ready); }
+.badge[data-status="dev"]::before { background: var(--st-dev); }
 
 /* ---------- Home: selected work cards ---------- */
 
