@@ -65,11 +65,11 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now.
 
 ## Open items
-- **Custom domain:** move the site to davecriswell.com (see "Custom domain" below).
+- **Custom domain:** finish GitHub's Pages settings (step 3 below).
 - **Optional:** a short Avid4 Adventure or Bonusly case study to cover 2017 to 2023.
 
-## Custom domain (planned, not done yet)
-The site still lives at davecriswell.github.io. davecriswell.com is registered with Squarespace Domains and still points to the old WordPress site. The plan for the move:
+## Custom domain (in progress)
+davecriswell.com is registered with Squarespace Domains. Steps 1 and 2 are done (DNS moved off the old WordPress site in November 2026, and the GitHub Pages domain-verification TXT record added). The steps:
 1. In Squarespace Domains, point the domain's DNS at GitHub Pages (the A records for the root domain, plus a `www` CNAME record pointing to `davecriswell.github.io`).
 2. Add `docs/CNAME` with one line: `davecriswell.com`. Do this only once the DNS records are in place; adding it earlier sends visitors to a domain that doesn't reach the site yet.
 3. Set the domain in the repository's Settings → Pages, turn on "Enforce HTTPS" once GitHub has issued the certificate, and verify the domain under the account's Pages settings.
