@@ -18,10 +18,11 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 | Writing | `docs/writing/index.html` | `/writing/` |
 | Essay: The Club Platform I Keep Sketching | `docs/writing/the-club-platform-i-keep-sketching.html` | |
 | Essay: A Dashboard That Can Show Its Math | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
+| Essay: Reading Club Software's Future From Outside the Club | `docs/writing/reading-club-softwares-future-from-outside-the-club.html` | |
 
 - `docs/style.css` holds every style. Colors, fonts, and status-badge colors are tokens at the top in `:root`.
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
-- **The header and footer are repeated on every page.** If you change one, change it on every page (seven pages, counting each essay).
+- **The header and footer are repeated on every page.** If you change one, change it on every page (eight pages, counting each essay).
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
 - The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide on desktop, 220px on phones). To change it, replace that file and update the `width`/`height` on its `<img>` tag in `docs/about/index.html`.
 - **Every link to an outside site opens in a new tab:** add `target="_blank" rel="noopener"` to any `<a href="https://...">`. This covers LinkedIn (footer and About), sources cited in essays, and any new outside link. Links between pages of this site (`/work/`, `/writing/...`, `#contact`) and the `mailto:` email link open normally.
@@ -60,6 +61,7 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 - Essay titles capitalize every major word (title case). Case study titles on the Work page stay in sentence case.
 - Essays keep Dave's wording. Only fix what he asks for, plus em dashes (none allowed). A diagram from a private artifact gets redrawn on the page, since visitors can't open his artifacts.
 - The architecture diagram in "The Club Platform I Keep Sketching" is plain HTML and CSS (`.arch` styles in `style.css`), redrawn from Dave's "Club data core architecture" whiteboard.
+- The foundation diagram in "Reading Club Software's Future From Outside the Club" is an inline SVG (`.leap` styles in `style.css`), redrawn from the diagram in Dave's draft. Its table uses `.essay-table`.
 
 ## Design
 Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now.

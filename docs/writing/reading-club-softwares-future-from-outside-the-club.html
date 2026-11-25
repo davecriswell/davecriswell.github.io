@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading Club Software’s Future From Outside the Club · Dave Criswell</title>
+  <meta name="description" content="A thought exercise: if youth sports club platforms trail other software, the trends elsewhere are a preview of what clubs will need next.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <!-- Header: the same on every page. If you change it, change it on every page. -->
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-name">Dave Criswell</span>
+      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/work/">Work</a>
+      <a href="/playbook/">Playbook &amp; AI</a>
+      <a href="/writing/" aria-current="page">Writing</a>
+      <a href="/about/">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <article class="article essay">
+      <a class="back" href="/writing/">&larr; All writing</a>
+      <span class="label">Club software &middot; November 2026</span>
+      <h1>Reading Club Software’s Future From Outside the Club</h1>
+
+      <p>At the Institute for Youth Sports Leaders conference in November, one observation kept coming up in hallway conversations: youth sports club platforms are behind. Not broken, and not bad. Just behind the software that other kinds of organizations use every day. I’d been thinking it for a while, and it was useful to hear club leaders say it out loud.</p>
+
+      <p>One session made the gap concrete. A presenter asked the room who uses AI in their daily work, and most hands went up. Then he asked who felt comfortable teaching a new teammate to use it, and the count dropped sharply. Club leaders are using AI. Most just haven’t been given much to build on.</p>
+
+      <p>It’s an easy thing to say and a harder thing to explain. So this piece is a thought exercise. If club software trails other software, then what’s happening elsewhere is a preview. What happens if you read those trends on purpose and ask what each one could mean for a club?</p>
+
+      <h2>Why I look outside youth sports</h2>
+
+      <p>I spent most of my career in software companies before I spent several years deep in club operations. That combination makes the gap hard to unsee. Things that were routine in a software company, like a shared CRM, apps that talk to each other, and one agreed definition of a customer, were either missing at the club or something I had to build by hand.</p>
+
+      <p>The upside of being behind is that you get to see the future early. Software companies, marketing teams, and data teams have already run into problems that clubs are only starting to hit. Technology thought leaders like Scott Brinker, who has tracked marketing technology for nearly two decades, map those problems as they happen. That makes the rest of the software world a useful lens.</p>
+
+      <p>The method I’ve found useful is:</p>
+
+      <ol>
+        <li>Pick a trend that’s already established outside youth sports.</li>
+        <li>Ask what problem it solves there.</li>
+        <li>Find the club version of that problem.</li>
+        <li>Ask what the solution would need to look like for a club, given who actually works there and how they work.</li>
+      </ol>
+
+      <h2>Why club platforms lag</h2>
+
+      <p>My first theory was about familiarity. Many club staff have never worked with the tools that are standard in a software company: Slack, Zapier, a real CRM, a content management system, and now AI connectors like MCP. If you’ve never connected two apps, you don’t think to ask your registration platform for an integration. If you’ve never had a CRM, you don’t miss lifecycle stages. Vendors build for the requests they get, so the gap reinforces itself.</p>
+
+      <p>Recent data backs up the hallway consensus. In a 2026 survey of senior sports executives by SportsPro and Sportradar, 82% of organizations in professional sport said they already use AI (<a href="https://www.yogonet.com/international/news/2026/02/24/117740-global-sportstech-report-2026-finds-82-of-sports-organizations-deploying-ai" target="_blank" rel="noopener">Yogonet</a>). In youth sports, as of November 2026, no major club platform had shipped its own MCP server for AI agents (<a href="https://youthsportsbusinessreport.com/ai-agents-for-youth-sports-parents-apple-imessage-mcp/" target="_blank" rel="noopener">YSBR</a>).</p>
+
+      <p>But the more I looked, the less this seemed specific to clubs. It looks like a small-organization pattern. Many clubs belong to both groups below, a nonprofit on paper that runs like a small business:</p>
+
+      <ul>
+        <li><strong>Nonprofits:</strong> in Virtuous’s 2026 benchmark of 346 nonprofits, 92% use AI in some way, but only 7% report major impact. 65% describe their use as reactive and individual, just 4% have documented, repeatable AI workflows, and 47% have no AI policy (<a href="https://virtuous.org/blog/the-2026-nonprofit-ai-adoption-report-blog/" target="_blank" rel="noopener">Virtuous</a>).</li>
+        <li><strong>Small businesses:</strong> 73% of owners in a Goldman Sachs survey said they’d benefit from more training to implement AI well (<a href="https://www.goldmansachs.com/community-impact/10000-small-businesses-voices/insights/ai-presents-a-major-opportunity-for-small-businesses" target="_blank" rel="noopener">Goldman Sachs</a>).</li>
+      </ul>
+
+      <p>So familiarity is part of it, but I don’t think it’s the root. Clubs have structural reasons of their own:</p>
+
+      <ul>
+        <li><strong>Seasonal, part-time staffing.</strong> Many coaches work part-time and turn over between seasons, so training rarely compounds.</li>
+        <li><strong>The buyer isn’t the daily user.</strong> A director or board often chooses the platform, while coaches and parents live in it.</li>
+        <li><strong>Revenue follows checkout.</strong> Many club platforms earn on registration and payments, so roadmaps naturally favor checkout over day-to-day operations.</li>
+        <li><strong>Minors’ data raises the stakes.</strong> Openness carries more risk when the records belong to kids, so caution wins by default.</li>
+        <li><strong>No two clubs run alike.</strong> Vendors build for the middle, and the edges get workarounds.</li>
+        <li><strong>A fragmented ecosystem.</strong> Leagues, governing bodies, and associations each run their own systems. In his IYSL keynote, LeagueApps co-founder Jeremy Goldberg noted that youth sports has no shared data or standards, so a coach can be background-checked three times under different rules. Platforms inherit that complexity, and as he put it, that’s before AI enters the picture.</li>
+        <li><strong>Tools shape habits.</strong> A platform with no integration layer produces staff who never learn to integrate.</li>
+      </ul>
+
+      <p>That last point is the one I keep coming back to. Low technical sophistication is as much a result of the tools clubs have been given as a cause of the lag. That changes where the opportunity sits. Club staff shouldn’t have to become software people. The platform has to carry that sophistication for them.</p>
+
+      <h2>Five trends worth borrowing</h2>
+
+      <p>Here are five trends I’m watching outside youth sports, and what each could look like inside a club platform. None of them asks club staff to become technologists. Each one moves complexity into the platform.</p>
+
+      <div class="table-scroll">
+        <table class="essay-table">
+          <thead>
+            <tr><th>Trend</th><th>Where it showed up first</th><th>What it could look like for a club</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>From context to coherence</td><td>Marketing technology</td><td>One shared set of club vocabulary, rules, voice, and calendar that every tool and AI assistant reads</td></tr>
+            <tr><td>The interface moves to the agent</td><td>SaaS broadly, now consumer AI</td><td>Parents and staff get answers and take actions through their own AI, with the platform governing access</td></tr>
+            <tr><td>Define it once</td><td>Data and analytics teams</td><td>One definition of “returning player,” “active,” and “retention” used by every report and every AI</td></tr>
+            <tr><td>Integration as a built-in</td><td>Software company tech stacks</td><td>League data, compliance, and CRM connections that just work, with no Zapier skills required</td></tr>
+            <tr><td>Software plus enablement</td><td>SaaS customer success</td><td>Templates, playbooks, and AI policies delivered with the product, not left for each club to invent</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>From context to coherence.</strong> Brinker argues that giving AI good information is no longer enough. Once many people and AI tools act at once, the hard part is keeping everything aligned. He calls this coherence and breaks it into context, control, coordination, cadence, and calibration (<a href="https://newsletter.chiefmartec.com/p/why-coherence-is-more-important-than-context-for-agentic-marketing-to-succeed" target="_blank" rel="noopener">Brinker</a>). A club already has this problem without AI. A family hears from the registration system, the coach, the newsletter, the league, and the uniform vendor, and it can feel like five different organizations. As every director starts drafting with AI, that drift speeds up unless the club’s shared context lives somewhere every tool can read.</p>
+
+      <p><strong>The interface moves to the agent.</strong> Brinker has also argued that the user interface is losing its value as a moat, because AI agents work above it through APIs (<a href="https://newsletter.chiefmartec.com/p/the-saas-moats-are-crumbling-but-the-opportunity-is-bigger" target="_blank" rel="noopener">Brinker</a>). Youth sports is already seeing this. In November, Onsides launched what it calls the first youth sports MCP, pulling team data from several major platforms into ChatGPT so parents can check schedules and update availability (<a href="https://youthsportsbusinessreport.com/ai-agents-for-youth-sports-parents-apple-imessage-mcp/" target="_blank" rel="noopener">YSBR</a>). Operators see it coming too. At IYSL, Chad Gruen of 3-Step Sports, predicted that opening an app to check your child’s schedule will be gone within five years. If parents get there first, the platform’s job shifts from owning the screen to governing the door.</p>
+
+      <p><strong>Define it once.</strong> Data teams learned that when every report defines a metric its own way, the numbers quietly drift apart. A semantic layer defines metrics once and shares them with every dashboard and AI tool, and Thoughtworks advises starting with one domain (<a href="https://www.thoughtworks.com/radar/techniques/semantic-layer" target="_blank" rel="noopener">Thoughtworks</a>). For clubs, that first domain is obvious: registration and retention. I’ve watched the same “rostered players” number come out differently depending on which export it came from.</p>
+
+      <p><strong>Integration as a built-in.</strong> Software companies stitch their stacks together with tools like Zapier and, increasingly, MCP. Clubs mostly can’t, so their seams stay manual: league schedules, compliance status, CRM stages, staffing. The club version of this trend is that those connections come pre-built, with agreed formats on both sides.</p>
+
+      <p><strong>Software plus enablement.</strong> The nonprofit research points to what separates the few organizations getting real value from AI: governance, shared workflows, and documented practices, not just access to tools (<a href="https://virtuous.org/blog/the-2026-nonprofit-ai-adoption-report-blog/" target="_blank" rel="noopener">Virtuous</a>). Most clubs won’t build those alone. A platform that ships them, with starter AI policies, operating playbooks, and season templates, closes the gap faster than any feature.</p>
+
+      <h2>Could clubs leapfrog?</h2>
+
+      <p>Here’s the part of the exercise I find most interesting. Some countries skipped landlines and went straight to mobile phones. Could clubs skip the stitched-together tool era, with Slack, Zapier, a CRM, and a CMS all wired by hand, and go straight to asking an AI agent?</p>
+
+      <p>There’s a reason to think so. JPMorganChase Institute’s payment data shows that newer small businesses adopt AI much faster than older ones. Firms founded in 2025 reached 10% AI adoption in about six months, compared with more than six years for firms founded in 2019 (<a href="https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses" target="_blank" rel="noopener">JPMorganChase Institute</a>). Organizations without old habits to unlearn can move quickly. A director who never learned Zapier might go straight to typing “who on the U12 girls team hasn’t registered for spring?” into an assistant.</p>
+
+      <p>But leapfrogging only works if the infrastructure underneath is there. Mobile phones needed cell towers. A club agent needs clean data, shared definitions, clear permissions, and a calendar it can trust. Without those, an agent just produces confident wrong answers faster.</p>
+
+      <!-- Foundation diagram, redrawn as inline SVG from the diagram in Dave's draft. Styles under .leap in style.css. -->
+      <figure class="leap" aria-labelledby="leap-caption">
+        <div class="leap-scroll">
+          <svg viewBox="0 0 760 376" role="img" aria-labelledby="leap-title leap-desc">
+            <title id="leap-title">Clubs can leapfrog only if the platform carries the foundation</title>
+            <desc id="leap-desc">Four groups (staff and directors, coaches, parents and agents, partner apps) all reach the club platform. The platform carries five foundations: coherence, definitions, access, connections, and enablement. Underneath sits the club data core.</desc>
+            <defs>
+              <marker id="leap-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path class="leap-arrowhead" d="M0 0L10 5L0 10z"/>
+              </marker>
+            </defs>
+            <text class="leap-heading" x="24" y="34">Clubs can leapfrog only if the platform carries the foundation</text>
+
+            <rect class="leap-box" x="24" y="56" width="166" height="56" rx="8"/>
+            <text class="leap-name" x="107" y="80">Staff and directors</text>
+            <text class="leap-sub" x="107" y="96">Ask in plain words</text>
+
+            <rect class="leap-box" x="206" y="56" width="166" height="56" rx="8"/>
+            <text class="leap-name" x="289" y="80">Coaches</text>
+            <text class="leap-sub" x="289" y="96">Rosters, game reports</text>
+
+            <rect class="leap-box" x="388" y="56" width="166" height="56" rx="8"/>
+            <text class="leap-name" x="471" y="80">Parents and agents</text>
+            <text class="leap-sub" x="471" y="96">Schedules, payments</text>
+
+            <rect class="leap-box" x="570" y="56" width="166" height="56" rx="8"/>
+            <text class="leap-name" x="653" y="80">Partner apps</text>
+            <text class="leap-sub" x="653" y="96">Leagues, compliance</text>
+
+            <g class="leap-line">
+              <path d="M107 112V142" marker-end="url(#leap-arrow)"/>
+              <path d="M289 112V142" marker-end="url(#leap-arrow)"/>
+              <path d="M471 112V142" marker-end="url(#leap-arrow)"/>
+              <path d="M653 112V142" marker-end="url(#leap-arrow)"/>
+              <path d="M380 264V294" marker-end="url(#leap-arrow)"/>
+            </g>
+
+            <rect class="leap-platform" x="24" y="144" width="712" height="120" rx="8"/>
+            <text class="leap-name leap-left" x="40" y="166">Club platform: carries the foundation so staff don’t have to</text>
+
+            <rect class="leap-box leap-inner" x="40" y="176" width="123" height="72" rx="8"/>
+            <text class="leap-name" x="101.5" y="200">Coherence</text>
+            <text class="leap-sub"><tspan x="101.5" y="216">Shared rules,</tspan><tspan x="101.5" y="232">voice, calendar</tspan></text>
+
+            <rect class="leap-box leap-inner" x="179" y="176" width="123" height="72" rx="8"/>
+            <text class="leap-name" x="240.5" y="200">Definitions</text>
+            <text class="leap-sub"><tspan x="240.5" y="216">One meaning for</tspan><tspan x="240.5" y="232">every metric</tspan></text>
+
+            <rect class="leap-box leap-inner" x="318" y="176" width="123" height="72" rx="8"/>
+            <text class="leap-name" x="379.5" y="200">Access</text>
+            <text class="leap-sub"><tspan x="379.5" y="216">A governed door</tspan><tspan x="379.5" y="232">for any agent</tspan></text>
+
+            <rect class="leap-box leap-inner" x="457" y="176" width="123" height="72" rx="8"/>
+            <text class="leap-name" x="518.5" y="200">Connections</text>
+            <text class="leap-sub"><tspan x="518.5" y="216">Pre-built links</tspan><tspan x="518.5" y="232">to leagues, CRM</tspan></text>
+
+            <rect class="leap-box leap-inner" x="596" y="176" width="123" height="72" rx="8"/>
+            <text class="leap-name" x="657.5" y="200">Enablement</text>
+            <text class="leap-sub"><tspan x="657.5" y="216">Playbooks and</tspan><tspan x="657.5" y="232">AI policies</tspan></text>
+
+            <rect class="leap-core" x="24" y="296" width="712" height="56" rx="8"/>
+            <text class="leap-name" x="380" y="320">Club data core</text>
+            <text class="leap-sub" x="380" y="336">Households, players, teams, coaches, programs, payments, schedules</text>
+          </svg>
+        </div>
+        <figcaption id="leap-caption">The foundation a club platform should carry: 4 actors, 5 foundations, 1 data core.</figcaption>
+      </figure>
+
+      <p>Staff, coaches, parents, and partner apps will each ask in their own way, increasingly through AI. The layer in the middle is what keeps those answers consistent and safe, and it belongs in the platform rather than on each club’s to-do list.</p>
+
+      <p>In my own club work, most of what I built to stitch tools together turned out to be exactly that infrastructure: team-name mappings, controlled vocabularies, data pipelines, and written rules for what data can go where. None of it was glamorous. All of it is what makes AI useful instead of risky. <strong>If a platform provided that foundation by default, clubs might be able to skip the years of plumbing that software companies went through.</strong></p>
+
+      <h2>What I’m still working through</h2>
+
+      <p>This is a thought exercise, so I’ll end with the questions I don’t have answers to yet.</p>
+
+      <ul>
+        <li><strong>Is “less sophisticated” the right frame?</strong> I suspect “less supported” is closer. Club staff are resourceful. Most of them just haven’t been handed tools that reward learning more.</li>
+        <li><strong>Who should own a club’s context?</strong> The platform, the club, or a neutral layer the club controls? The answer shapes how easily a club can switch vendors or add new tools.</li>
+        <li><strong>How do children’s data rules shape agent access?</strong> The amended COPPA Rule, in force since April 2026, requires separate parental consent before children’s data is shared with third parties for targeted ads or AI training (<a href="https://youthsportsbusinessreport.com/ai-agents-for-youth-sports-parents-apple-imessage-mcp/" target="_blank" rel="noopener">YSBR</a>). Agents acting on a parent’s behalf will test where those lines sit.</li>
+        <li><strong>Will platforms open up or wall off?</strong> Other industries are split. Some have blocked AI agents outright, while others are racing to support them.</li>
+        <li><strong>Who pays for enablement?</strong> Clubs run on tight budgets. Training and setup work may have to be built into the product, or funded by the vendor as a retention investment.</li>
+      </ul>
+
+      <p>What I’m more confident about is the direction. The trends that matter most for clubs aren’t flashy features. They’re the unglamorous foundations other industries already learned they needed: shared definitions, governed access, built-in connections, and help putting it all to work. The platforms that bring those to clubs, without asking club staff to become software people, will move the whole category forward.</p>
+
+      <p>This piece pairs with <a href="/writing/the-club-platform-i-keep-sketching.html">The Club Platform I Keep Sketching</a>, which looks at the same problem from inside the club. If you run a club, build software for clubs, or are tracking these trends in another industry, I’d love to compare notes.</p>
+
+      <h2>Further reading</h2>
+
+      <ul class="further-reading">
+        <li>Scott Brinker, <a href="https://newsletter.chiefmartec.com/p/why-coherence-is-more-important-than-context-for-agentic-marketing-to-succeed" target="_blank" rel="noopener">Why coherence is more important than context for agentic marketing to succeed</a> (November 2026)</li>
+        <li>Scott Brinker, <a href="https://newsletter.chiefmartec.com/p/the-saas-moats-are-crumbling-but-the-opportunity-is-bigger" target="_blank" rel="noopener">The SaaS Moats Are Crumbling, but the Opportunity Is Bigger</a> (February 2026)</li>
+        <li>Youth Sports Business Report, <a href="https://youthsportsbusinessreport.com/ai-agents-for-youth-sports-parents-apple-imessage-mcp/" target="_blank" rel="noopener">AI agents for youth sports parents: Apple, iMessage and MCP</a> (November 2026)</li>
+        <li>Virtuous, <a href="https://virtuous.org/blog/the-2026-nonprofit-ai-adoption-report-blog/" target="_blank" rel="noopener">The 2026 Nonprofit AI Adoption Report</a> (February 2026)</li>
+        <li>JPMorganChase Institute, <a href="https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses" target="_blank" rel="noopener">Understanding the use of AI among small businesses</a> (April 2026)</li>
+        <li>Goldman Sachs 10,000 Small Businesses Voices, <a href="https://www.goldmansachs.com/community-impact/10000-small-businesses-voices/insights/ai-presents-a-major-opportunity-for-small-businesses" target="_blank" rel="noopener">AI presents a major opportunity for small businesses</a> (March 2026)</li>
+        <li>Thoughtworks Technology Radar, <a href="https://www.thoughtworks.com/radar/techniques/semantic-layer" target="_blank" rel="noopener">Semantic layer</a></li>
+      </ul>
+
+      <p><a class="back" href="/writing/">&larr; All writing</a></p>
+    </article>
+
+  </main>
+
+  <!-- Footer: the same on every page. If you change it, change it on every page. -->
+  <footer class="site-footer" id="contact">
+    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
+    <div class="contact-links">
+      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
+      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="fine-print">
+      <span>&copy; 2026 Dave Criswell</span>
+      <span>Built with Claude Code</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
