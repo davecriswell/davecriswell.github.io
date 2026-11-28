@@ -7,34 +7,36 @@
   <meta name="description" content="What a pile of club workarounds says about the platform youth clubs actually need: an open club data core, with AI on top.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/" aria-current="page">Writing</a>
       <a href="/about/">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
+<main id="main">
 
     <article class="article essay">
-      <a class="back" href="/writing/">&larr; All writing</a>
-      <span class="label">Club software &middot; November 2026</span>
-      <h1>The Club Platform I Keep Sketching</h1>
+      <header>
+        <a class="back" href="/writing/">&larr; All writing</a>
+        <p class="article-meta">Club software &middot; November 2026 &middot; 9 min read</p>
+        <h1>The Club Platform I Keep Sketching</h1>
+        <p class="dek">Every workaround a club builds marks something its software doesn’t do. Lined up, they sketch the platform clubs actually need.</p>
+        <div class="accent-rule" aria-hidden="true"></div>
+      </header>
 
       <p>No club management platform is perfect, and I doubt one ever will be. Youth clubs vary too much for that. A 200-player community club, a 2,000-player multi-region competitive club and a volleyball club that runs like a retail business with courts to fill all need different things, and every club has its own history, habits and quirks.</p>
 
@@ -212,24 +214,36 @@
 
       <p>If you run a club, build software for clubs or just think about this stuff, I’d love to compare notes.</p>
 
-      <p><a class="back" href="/writing/">&larr; All writing</a></p>
+      <div class="author">
+        <img src="/images/dave.jpg" alt="" width="48" height="48">
+        <p><strong>Dave Criswell</strong> builds the systems behind operations and revenue, and spends his free time on the roads and trails near home.</p>
+      </div>
     </article>
+
+    <section class="container keep-reading" aria-labelledby="keep-heading">
+      <h2 class="eyebrow" id="keep-heading">Keep reading</h2>
+      <a href="/writing/reading-club-softwares-future-from-outside-the-club.html"><span class="keep-title">Reading Club Software’s Future From Outside the Club</span><span class="read">Read &rarr;</span></a>
+    </section>
+
 
   </main>
 
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
     </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </footer>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
 
-</div>
 </body>
 </html>

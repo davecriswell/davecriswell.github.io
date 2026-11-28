@@ -7,159 +7,183 @@
   <meta name="description" content="Case studies from a youth soccer club and earlier software roles: the problem, what I built, what it changes, and where it stands.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/" aria-current="page">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/">Writing</a>
       <a href="/about/">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <header class="container page-head">
+    <h1 class="page-title">Work</h1>
+    <p>Each case study covers the problem, what I built, and what it changes. I’d rather tell you exactly where something stands, so every project says how far along it is.</p>
   </header>
 
-  <main id="main">
+  <section class="container page-section" id="at-the-club" aria-labelledby="club-heading">
+    <div class="group-head">
+      <h2 id="club-heading">At Select Soccer Club</h2>
+      <span>2023 to now</span>
+    </div>
 
-    <section class="page-intro">
-      <h1>Work</h1>
-      <p class="lede">My favorite work starts with a messy, manual process and ends with a system people actually use. Each example covers the problem, what I built, and what it changes. The Select examples also say what makes them hold up, and a badge shows their stage. Some run every week, and some are still being built. I’d rather tell you exactly where something is than round it up.</p>
-    </section>
-
-    <section class="section" id="at-the-club">
-      <div class="section-head">
-        <h2>At Select Soccer Club</h2>
-      </div>
-      <article class="case" id="data-foundation">
-        <header class="case-head">
+    <!-- Each case study: summary row, then four cards, then tools.
+         Status is plain text: Live, Partly automated, or In development. -->
+    <article class="case" id="data-foundation">
+      <div class="case-summary">
+        <div class="case-main">
           <h3>A data foundation for a platform with no API</h3>
-          <span class="badge" data-status="partial">Partly automated</span>
-        </header>
-        <p class="case-line">Unlocking registration data so reporting and internal tools share one source of truth.</p>
-        <dl class="case-body">
-          <div><dt>The problem</dt><dd>As Select grew, more reports and internal tools needed the same registration data. The club’s registration platform has no API or MCP connection, so player, roster, and subscription data came from manual exports, and each new report started from its own download.</dd></div>
-          <div><dt>What I built</dt><dd>A pipeline that moves scheduled exports into cloud storage and feeds an Airtable base, which serves as Select’s data layer. Records match on stable IDs, so each update lands on the right player and nothing is duplicated or lost.</dd></div>
-          <div><dt>What it changes</dt><dd>Reports, dashboards, and internal apps can build on one trusted source, instead of each one starting from another downloaded spreadsheet.</dd></div>
-          <div><dt>Built to hold up</dt><dd>Records match on stable IDs and are only ever updated or created, never deleted, so one bad export can’t wipe out good data. Every step runs on a schedule, so the data doesn’t depend on someone remembering to download it.</dd></div>
-        </dl>
-        <p class="tools"><span class="label">Tools</span>Google Cloud Run · Cloud Scheduler · Cloud Storage · Google Drive · Airtable · Zapier</p>
-      </article>
-
-      <article class="case" id="lead-funnel">
-        <header class="case-head">
-          <h3>A lead-to-enrollment funnel</h3>
-          <span class="badge" data-status="partial">Partly automated</span>
-        </header>
-        <p class="case-line">Every interested family gets a prompt response and a clear path to registering.</p>
-        <dl class="case-body">
-          <div><dt>The problem</dt><dd>Families find Select through several channels. As interest grew, the club needed one consistent way to qualify every inquiry, route it to the right person, log the conversation, and follow up, especially in peak season, when volume is highest and a quick response matters most.</dd></div>
-          <div><dt>What I built</dt><dd>A documented lead-to-enrollment workflow in HubSpot: intake from every channel, a qualification layer, routing by region, and follow-up sequences triggered by each prospect’s digital signals. Before building anything, I mapped how inquiries actually arrived and wrote the business case for the CRM.</dd></div>
-          <div><dt>What it changes</dt><dd>No inquiry depends on someone remembering to follow up. Every prospect gets a prompt first response, then timely touchpoints based on what they’ve shown interest in.</dd></div>
-          <div><dt>Built to hold up</dt><dd>The whole workflow is documented, from first inquiry to enrolled, so anyone can see how an inquiry moves and who owns each step. Routing is set by region, so adding a person or a region means updating a rule, not rebuilding the funnel.</dd></div>
-        </dl>
-        <p class="tools"><span class="label">Tools</span>HubSpot · Zapier</p>
-      </article>
-
-      <article class="case" id="shift-imports">
-        <header class="case-head">
-          <h3>From schedule PDFs to payroll-ready shifts</h3>
-          <span class="badge" data-status="live">Live</span>
-        </header>
-        <p class="case-line">Schedules in any format become accurate shifts in a fraction of the time.</p>
-        <dl class="case-body">
-          <div><dt>The problem</dt><dd>Select’s hourly staff schedules arrive in every format: screenshots, PDFs, and spreadsheets. Entering them into the scheduling platform by hand took real time each season, and any retyping error could carry through to payroll.</dd></div>
-          <div><dt>What I built</dt><dd>A repeatable process that turns a schedule in any format into a shift import, building accurate shifts from the rules for each type of job. Before payroll, a report flags differences between scheduled and worked hours so they get fixed first.</dd></div>
-          <div><dt>What it changes</dt><dd>Schedule entry takes a small fraction of the time it used to, and mismatches surface before payroll instead of after it.</dd></div>
-          <div><dt>Built to hold up</dt><dd>The rules live in one place (setup time, game lengths by age group, how each job type becomes a shift), so a new season means changing a rule, not retyping a schedule. An overlap check and a shared vocabulary for regions and programs keep every import consistent, and the pre-payroll report catches anything that slips through.</dd></div>
-        </dl>
-        <p class="tools"><span class="label">Tools</span>Connecteam · Google Sheets · Python · Claude</p>
-      </article>
-
-      <article class="case" id="game-reports">
-        <header class="case-head">
-          <h3>A weekend game-report system</h3>
-          <span class="badge" data-status="live">Live</span>
-        </header>
-        <p class="case-line">Directors know what happened at every game, and what needs a follow-up.</p>
-        <dl class="case-body">
-          <div><dt>The problem</dt><dd>With Select teams playing across several leagues every weekend, directors needed one consistent way to hear from coaches: what happened, whether results were entered, and which concerns needed a follow-up.</dd></div>
-          <div><dt>What I built</dt><dd>A weekly sync that builds one list of fixtures from every league Select plays in. Coaches pick their game from a simple form and file one report. Directors get a prioritized follow-up queue, with serious incidents at the top, and can nudge everyone who hasn’t filed with one click.</dd></div>
-          <div><dt>What it changes</dt><dd>Instead of chasing updates, a director starts the week with a short list of what needs attention, so issues get handled sooner.</dd></div>
-          <div><dt>Built to hold up</dt><dd>A game keeps its report even when it’s rescheduled, and the sync refuses to run if a league’s data suddenly shrinks. Reports are only ever added, never overwritten, and it runs on Google Sheets because that’s where staff already work.</dd></div>
-        </dl>
-        <p class="tools"><span class="label">Tools</span>Google Sheets · Apps Script · Zapier · ClickUp</p>
-      </article>
-
-      <article class="case" id="pacing-dashboard">
-        <header class="case-head">
-          <h3>A dashboard that can show its math</h3>
-          <span class="badge" data-status="dev">In development</span>
-        </header>
-        <p class="case-line">Year-over-year registration pacing that can explain every number it shows.</p>
-        <dl class="case-body">
-          <div><dt>The problem</dt><dd>Select’s leadership uses a registration pacing dashboard to see whether the club is ahead of or behind last year. My first version answered that at a glance, but it couldn’t explain its own numbers, and a pacing number is only useful if people trust it.</dd></div>
-          <div><dt>What I built</dt><dd>A rebuild that compares rostered players by program, region, gender, and age group against the same date last year, with a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases history.</dd></div>
-          <div><dt>What it changes</dt><dd>When a number looks off, anyone can trace it back to the rows behind it, and last season’s history survives every refresh.</dd></div>
-          <div><dt>Built to hold up</dt><dd>Every number ties back to a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases the history the comparison depends on, and a new season starts by uploading the latest export.</dd></div>
-        </dl>
-        <p class="tools"><a href="/writing/a-dashboard-that-can-show-its-math.html">Read the story behind the rebuild &rarr;</a></p>
-      </article>
-    </section>
-
-    <section class="section" id="earlier">
-      <div class="section-head">
-        <h2>Earlier, in software</h2>
+          <p class="case-line">Unlocking registration data so reporting and internal tools share one source of truth.</p>
+        </div>
+        <div class="case-side"><p class="status">Status: <strong>Partly automated</strong></p></div>
       </div>
-      <article class="case" id="trainingpeaks">
-        <header class="case-head">
-          <div><span class="label">Marketing automation · TrainingPeaks</span><h3>A 500,000-contact migration</h3></div>
-        </header>
+      <dl class="card-grid">
+        <div class="card"><dt>The problem</dt><dd>As Select grew, more reports and internal tools needed the same registration data. The club’s registration platform has no API or MCP connection, so player, roster, and subscription data came from manual exports, and each new report started from its own download.</dd></div>
+        <div class="card"><dt>What I built</dt><dd>A pipeline that moves scheduled exports into cloud storage and feeds an Airtable base, which serves as Select’s data layer. Records match on stable IDs, so each update lands on the right player and nothing is duplicated or lost.</dd></div>
+        <div class="card"><dt>What it changes</dt><dd>Reports, dashboards, and internal apps can build on one trusted source, instead of each one starting from another downloaded spreadsheet.</dd></div>
+        <div class="card card-dark"><dt>Built to hold up</dt><dd>Records match on stable IDs and are only ever updated or created, never deleted, so one bad export can’t wipe out good data. Every step runs on a schedule, so the data doesn’t depend on someone remembering to download it.</dd></div>
+      </dl>
+      <p class="tools"><strong>Tools</strong>Google Cloud Run · Cloud Scheduler · Cloud Storage · Google Drive · Airtable · Zapier</p>
+    </article>
+
+    <article class="case" id="lead-funnel">
+      <div class="case-summary">
+        <div class="case-main">
+          <h3>A lead-to-enrollment funnel</h3>
+          <p class="case-line">Every interested family gets a prompt response and a clear path to registering.</p>
+        </div>
+        <div class="case-side"><p class="status">Status: <strong>Partly automated</strong></p></div>
+      </div>
+      <dl class="card-grid">
+        <div class="card"><dt>The problem</dt><dd>Families find Select through several channels. As interest grew, the club needed one consistent way to qualify every inquiry, route it to the right person, log the conversation, and follow up, especially in peak season, when volume is highest and a quick response matters most.</dd></div>
+        <div class="card"><dt>What I built</dt><dd>A documented lead-to-enrollment workflow in HubSpot: intake from every channel, a qualification layer, routing by region, and follow-up sequences triggered by each prospect’s digital signals. Before building anything, I mapped how inquiries actually arrived and wrote the business case for the CRM.</dd></div>
+        <div class="card"><dt>What it changes</dt><dd>No inquiry depends on someone remembering to follow up. Every prospect gets a prompt first response, then timely touchpoints based on what they’ve shown interest in.</dd></div>
+        <div class="card card-dark"><dt>Built to hold up</dt><dd>The whole workflow is documented, from first inquiry to enrolled, so anyone can see how an inquiry moves and who owns each step. Routing is set by region, so adding a person or a region means updating a rule, not rebuilding the funnel.</dd></div>
+      </dl>
+      <p class="tools"><strong>Tools</strong>HubSpot · Zapier</p>
+    </article>
+
+    <article class="case" id="shift-imports">
+      <div class="case-summary">
+        <div class="case-main">
+          <h3>From schedule PDFs to payroll-ready shifts</h3>
+          <p class="case-line">Schedules in any format become accurate shifts in a fraction of the time.</p>
+        </div>
+        <div class="case-side"><p class="status">Status: <strong>Live</strong></p></div>
+      </div>
+      <dl class="card-grid">
+        <div class="card"><dt>The problem</dt><dd>Select’s hourly staff schedules arrive in every format: screenshots, PDFs, and spreadsheets. Entering them into the scheduling platform by hand took real time each season, and any retyping error could carry through to payroll.</dd></div>
+        <div class="card"><dt>What I built</dt><dd>A repeatable process that turns a schedule in any format into a shift import, building accurate shifts from the rules for each type of job. Before payroll, a report flags differences between scheduled and worked hours so they get fixed first.</dd></div>
+        <div class="card"><dt>What it changes</dt><dd>Schedule entry takes a small fraction of the time it used to, and mismatches surface before payroll instead of after it.</dd></div>
+        <div class="card card-dark"><dt>Built to hold up</dt><dd>The rules live in one place (setup time, game lengths by age group, how each job type becomes a shift), so a new season means changing a rule, not retyping a schedule. An overlap check and a shared vocabulary for regions and programs keep every import consistent, and the pre-payroll report catches anything that slips through.</dd></div>
+      </dl>
+      <p class="tools"><strong>Tools</strong>Connecteam · Google Sheets · Python · Claude</p>
+    </article>
+
+    <article class="case" id="game-reports">
+      <div class="case-summary">
+        <div class="case-main">
+          <h3>A weekend game-report system</h3>
+          <p class="case-line">Directors know what happened at every game, and what needs a follow-up.</p>
+        </div>
+        <div class="case-side"><p class="status">Status: <strong>Live</strong></p></div>
+      </div>
+      <dl class="card-grid">
+        <div class="card"><dt>The problem</dt><dd>With Select teams playing across several leagues every weekend, directors needed one consistent way to hear from coaches: what happened, whether results were entered, and which concerns needed a follow-up.</dd></div>
+        <div class="card"><dt>What I built</dt><dd>A weekly sync that builds one list of fixtures from every league Select plays in. Coaches pick their game from a simple form and file one report. Directors get a prioritized follow-up queue, with serious incidents at the top, and can nudge everyone who hasn’t filed with one click.</dd></div>
+        <div class="card"><dt>What it changes</dt><dd>Instead of chasing updates, a director starts the week with a short list of what needs attention, so issues get handled sooner.</dd></div>
+        <div class="card card-dark"><dt>Built to hold up</dt><dd>A game keeps its report even when it’s rescheduled, and the sync refuses to run if a league’s data suddenly shrinks. Reports are only ever added, never overwritten, and it runs on Google Sheets because that’s where staff already work.</dd></div>
+      </dl>
+      <p class="tools"><strong>Tools</strong>Google Sheets · Apps Script · Zapier · ClickUp</p>
+    </article>
+
+    <article class="case" id="pacing-dashboard">
+      <div class="case-summary">
+        <div class="case-main">
+          <h3>A dashboard that can show its math</h3>
+          <p class="case-line">Year-over-year registration pacing that can explain every number it shows.</p>
+        </div>
+        <div class="case-side">
+          <p class="status">Status: <strong>In development</strong></p>
+          <p><a class="more" href="/writing/a-dashboard-that-can-show-its-math.html">Read the story behind the rebuild &rarr;</a></p>
+        </div>
+      </div>
+      <dl class="card-grid">
+        <div class="card"><dt>The problem</dt><dd>Select’s leadership uses a registration pacing dashboard to see whether the club is ahead of or behind last year. My first version answered that at a glance, but it couldn’t explain its own numbers, and a pacing number is only useful if people trust it.</dd></div>
+        <div class="card"><dt>What I built</dt><dd>A rebuild that compares rostered players by program, region, gender, and age group against the same date last year, with a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases history.</dd></div>
+        <div class="card"><dt>What it changes</dt><dd>When a number looks off, anyone can trace it back to the rows behind it, and last season’s history survives every refresh.</dd></div>
+        <div class="card card-dark"><dt>Built to hold up</dt><dd>Every number ties back to a parallel spreadsheet model that shows the work. Closed seasons are archived, so a refresh never erases the history the comparison depends on, and a new season starts by uploading the latest export.</dd></div>
+      </dl>
+    </article>
+  </section>
+
+  <section class="container page-section" id="earlier" aria-labelledby="earlier-heading">
+    <div class="group-head">
+      <h2 id="earlier-heading">Earlier, in software</h2>
+      <span>2011 to 2023</span>
+    </div>
+    <div class="earlier-grid">
+      <article class="case-sm" id="trainingpeaks">
+        <p class="case-label">Marketing automation · TrainingPeaks</p>
+        <h3>A 500,000-contact migration</h3>
         <p class="case-line">Tripled email-channel revenue in six months, against a twelve-month goal.</p>
-        <dl class="case-body three">
-          <div><dt>The project</dt><dd>I led the selection and implementation of a new marketing automation platform, including migrating 500,000 contacts with hundreds of data points each.</dd></div>
-          <div><dt>What it took</dt><dd>Integrations with several existing systems, and close work with marketing, sales, development, and the executive team.</dd></div>
-          <div><dt>The result</dt><dd>A behavioral and demographic lifecycle program on the new platform tripled email-channel revenue within six months. The goal had been twelve.</dd></div>
+        <dl class="case-list">
+          <dt>The project</dt><dd>I led the selection and implementation of a new marketing automation platform, including migrating 500,000 contacts with hundreds of data points each.</dd>
+          <dt>What it took</dt><dd>Integrations with several existing systems, and close work with marketing, sales, development, and the executive team.</dd>
+          <dt>The result</dt><dd>A behavioral and demographic lifecycle program on the new platform tripled email-channel revenue within six months. The goal had been twelve.</dd>
         </dl>
       </article>
-
-      <article class="case" id="rafflecopter">
-        <header class="case-head">
-          <div><span class="label">Lifecycle growth · Rafflecopter</span><h3>Personas, lifecycle stages, and the KPIs between them</h3></div>
-        </header>
+      <article class="case-sm" id="rafflecopter">
+        <p class="case-label">Lifecycle growth · Rafflecopter</p>
+        <h3>Personas, lifecycle stages, and the KPIs between them</h3>
         <p class="case-line">+32% average revenue per user and +30% lifetime value in one year.</p>
-        <dl class="case-body three">
-          <div><dt>The approach</dt><dd>Defined customer personas and lifecycle stages, then set the KPIs, success factors, and tactics for each stage, with a measurement framework to see progress.</dd></div>
-          <div><dt>What I built</dt><dd>Onboarding and lifecycle programs, plus the company’s business KPI dashboard.</dd></div>
-          <div><dt>The result</dt><dd>A 32% increase in average revenue per user and a 30% increase in lifetime value within a year.</dd></div>
+        <dl class="case-list">
+          <dt>The approach</dt><dd>Defined customer personas and lifecycle stages, then set the KPIs, success factors, and tactics for each stage, with a measurement framework to see progress.</dd>
+          <dt>What I built</dt><dd>Onboarding and lifecycle programs, plus the company’s business KPI dashboard.</dd>
+          <dt>The result</dt><dd>A 32% increase in average revenue per user and a 30% increase in lifetime value within a year.</dd>
         </dl>
       </article>
-    </section>
-
-  </main>
-
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
-    </div>
-  </footer>
+  </section>
 
-</div>
+  <section class="container page-section" aria-label="A word from a colleague">
+    <figure class="pull-quote">
+      <blockquote>“In addition to a deep understanding of our company’s internal analytics, Dave also possessed <span class="hl">a firm grasp of the emotional side of our customers</span>.”</blockquote>
+      <figcaption>Greg Goodson, Co-Founder, Rafflecopter</figcaption>
+    </figure>
+  </section>
+
+</main>
+
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
+    </div>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
+
 </body>
 </html>

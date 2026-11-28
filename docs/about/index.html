@@ -7,113 +7,119 @@
   <meta name="description" content="Who Dave Criswell is outside the case studies: what he cares about, why he builds systems, and life outside work.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/">Writing</a>
       <a href="/about/" aria-current="page">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <header class="container about-head">
+    <div class="about-text">
+      <h1 class="page-title">About</h1>
+      <p class="about-lead">A New Englander with a calm temperament, who thinks first about the people on the other end of a system.</p>
+      <p>What I’ve always enjoyed most is watching how people actually use something, where they get stuck, and what they skip, and adjusting from there. That’s what drew me to software, and it’s still how I approach every system I build.</p>
+      <p>I coached high school and club soccer for about a decade, and it turned out to be similar work. You set people up to succeed, watch what actually happens, and adjust, patiently and without drama.</p>
+      <p>I’m also interested in where AI is genuinely useful in operations, and where it’s just noise. This site is part of that: I built it with Claude Code as a way to learn.</p>
+    </div>
+    <!-- To change the photo, replace docs/images/dave.jpg (portrait, about 4:5) and update width/height here. -->
+    <img class="photo" src="/images/dave.jpg" width="556" height="695" alt="Dave smiling in a theater balcony">
   </header>
 
-  <main id="main">
+  <section class="container page-section" id="how-i-work" aria-labelledby="work-heading">
+    <h2 class="block-h2" id="work-heading">How I work</h2>
+    <ol class="principle-grid">
+      <li class="card"><p class="num">01</p><h3>Systems first, then the tool</h3><p>Understand how the work actually flows and who owns what, then choose software that fits. Not the other way around.</p></li>
+      <li class="card"><p class="num">02</p><h3>Meet people where they already work</h3><p>Put the form in the app coaches already open. Adoption is the real test of a system, and the hardest one to pass.</p></li>
+      <li class="card"><p class="num">03</p><h3>Show the math</h3><p>If a number can’t be traced back to its source, it isn’t ready to make decisions with.</p></li>
+      <li class="card"><p class="num">04</p><h3>Start small, then scale</h3><p>Ship a manual fallback now, pilot with one team or region, learn what breaks, and earn the right to roll it out.</p></li>
+      <li class="card"><p class="num">05</p><h3>Be honest about status</h3><p>“Automated through step four, manual after that” tells you more than “fully automated.” And sometimes step four is exactly the right place to stop.</p></li>
+      <li class="card"><p class="num">06</p><h3>Write it down</h3><p>A process that lives in one person’s head isn’t a system yet.</p></li>
+    </ol>
+  </section>
 
-    <section class="page-intro about">
-      <h1>About</h1>
-      <div class="about-grid">
-        <div class="about-text">
-          <p class="about-lead">I’m a native New Englander, and I have a calm presence by nature. The part of my work I care about most is the people on the other end of a system: the coach filling out a form after a long weekend of games, the parent registering a kid for the first time, the director who needs one number they can trust.</p>
-          <p>What I’ve always enjoyed most is watching how people actually use something, where they get stuck, and what they skip, and adjusting from there. That’s what drew me to software, and it’s still how I approach every system I build.</p>
-          <p>I coached high school and club soccer for about a decade, and it turned out to be similar work. You set people up to succeed, watch what actually happens, and adjust, patiently and without drama.</p>
-          <p>I’m also interested in where AI is genuinely useful in operations, and where it’s just noise. This site is part of that: I built it with Claude Code as a way to learn.</p>
-        </div>
-        <!-- To change the photo, replace docs/images/dave.jpg (portrait, about 4:5). -->
-        <img class="photo" src="/images/dave.jpg" width="556" height="695" alt="Dave smiling in a theater balcony">
-      </div>
-    </section>
+  <section class="container page-section" id="experience" aria-labelledby="experience-heading">
+    <div class="section-top">
+      <h2 class="block-h2" id="experience-heading">Experience</h2>
+      <a class="more" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">Full details on LinkedIn &rarr;</a>
+    </div>
+    <ul class="timeline">
+      <li><span class="years">2023 to now</span><span class="job"><strong>Select Soccer Club</strong> &middot; Assistant Executive Director, Marketing &amp; Systems Operations</span></li>
+      <li><span class="years">2022 to 2023</span><span class="job"><strong>Bonusly</strong> &middot; Marketing &amp; Revenue Operations</span></li>
+      <li><span class="years">2017 to 2022</span><span class="job"><strong>Avid4 Adventure</strong> &middot; Director of Marketing &amp; Customer Experience</span></li>
+      <li><span class="years">2014 to 2017</span><span class="job"><strong>Rafflecopter</strong> &middot; Director of Marketing</span></li>
+      <li><span class="years">2011 to 2014</span><span class="job"><strong>TrainingPeaks</strong> &middot; Director of Marketing</span></li>
+      <li><span class="years">2010 to 2011</span><span class="job"><strong>Montague Corporation</strong> &middot; Marketing Manager</span></li>
+    </ul>
+  </section>
 
-    <section class="section" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-      </div>
-      <ul class="timeline">
-        <li><span class="years">2023 to now</span><span class="org">Select Soccer Club</span><span class="role">Assistant Executive Director, Marketing &amp; Systems Operations</span></li>
-        <li><span class="years">2022 to 2023</span><span class="org">Bonusly</span><span class="role">Marketing &amp; Revenue Operations</span></li>
-        <li><span class="years">2017 to 2022</span><span class="org">Avid4 Adventure</span><span class="role">Director of Marketing &amp; Customer Experience</span></li>
-        <li><span class="years">2014 to 2017</span><span class="org">Rafflecopter</span><span class="role">Director of Marketing</span></li>
-        <li><span class="years">2011 to 2014</span><span class="org">TrainingPeaks</span><span class="role">Director of Marketing</span></li>
-        <li><span class="years">2010 to 2011</span><span class="org">Montague Corporation</span><span class="role">Marketing Manager</span></li>
-      </ul>
-      <p class="more-link"><a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">Full details on LinkedIn &rarr;</a></p>
-    </section>
+  <section class="container page-section" id="kind-words" aria-labelledby="kind-heading">
+    <h2 class="block-h2" id="kind-heading">Kind words</h2>
+    <div class="quotes">
+      <figure>
+        <blockquote>“He’s a skillful operator when it comes to pulling data together from many sources and creating a coherent and quantitative picture of the organization.”</blockquote>
+        <figcaption><strong>Justin Ratner</strong> &middot; Co-Founder, Rafflecopter</figcaption>
+      </figure>
+      <figure>
+        <blockquote>“In addition to a deep understanding of our company’s internal analytics, Dave also possessed a firm grasp of the emotional side of our customers.”</blockquote>
+        <figcaption><strong>Greg Goodson</strong> &middot; Co-Founder, Rafflecopter</figcaption>
+      </figure>
+      <figure>
+        <blockquote>“He drove change. He challenged us to be better. He took us to new places rapidly.”</blockquote>
+        <figcaption><strong>Steve Lankler</strong> &middot; Chief Technology Officer, Elm Blue Capital</figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <section class="section" id="kind-words">
-      <div class="section-head">
-        <h2>Kind words</h2>
-      </div>
-      <div class="quotes">
-        <figure>
-          <blockquote>“He’s a skillful operator when it comes to pulling data together from many sources and creating a coherent and quantitative picture of the organization.”</blockquote>
-          <figcaption><strong>Justin Ratner</strong>Co-Founder, Rafflecopter</figcaption>
-        </figure>
-        <figure>
-          <blockquote>“In addition to a deep understanding of our company’s internal analytics, Dave also possessed a firm grasp of the emotional side of our customers.”</blockquote>
-          <figcaption><strong>Greg Goodson</strong>Co-Founder, Rafflecopter</figcaption>
-        </figure>
-        <figure>
-          <blockquote>“He drove change. He challenged us to be better. He took us to new places rapidly.”</blockquote>
-          <figcaption><strong>Steve Lankler</strong>Chief Technology Officer, Elm Blue Capital</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" id="outside-work">
-      <div class="section-head">
-        <h2>Outside work</h2>
-      </div>
-      <p class="lede">Most of my time away from work is spent running or riding the roads and trails near home.</p>
-      <h3 class="sub-label"><span class="label">Along the way</span></h3>
-      <ul class="stat-list">
-        <li><span class="num">1.95</span><span>Ironman triathlons <em>(I learned the most from the .05 I didn’t finish)</em></span></li>
-        <li><span class="num">6</span><span>Half Ironmans</span></li>
-        <li><span class="num">5</span><span>Marathons</span></li>
-        <li><span class="num">1</span><span>Ultramarathon</span></li>
-      </ul>
-    </section>
-
-    <section class="epigraph" aria-label="A favorite quote">
+  <section class="container page-section outside" id="outside-work" aria-labelledby="outside-heading">
+    <h2 class="block-h2" id="outside-heading">Outside work</h2>
+    <p class="section-lede">Most of my time away from work is spent running or riding the roads and trails near home.</p>
+    <h3 class="eyebrow">Along the way</h3>
+    <ul class="stats">
+      <li><span class="stat-num">1.95</span><span class="stat-label">Ironman triathlons <em>(I learned the most from the .05 I didn’t finish)</em></span></li>
+      <li><span class="stat-num">6</span><span class="stat-label">Half Ironmans</span></li>
+      <li><span class="stat-num">5</span><span class="stat-label">Marathons</span></li>
+      <li><span class="stat-num">1</span><span class="stat-label">Ultramarathon</span></li>
+    </ul>
+    <figure class="epigraph">
       <blockquote>“Only those who will risk going too far can possibly find out how far one can go.”</blockquote>
-      <cite>T.S. Eliot</cite>
-    </section>
+      <figcaption>T.S. Eliot</figcaption>
+    </figure>
+  </section>
 
-  </main>
+</main>
 
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
     </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </footer>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
 
-</div>
 </body>
 </html>

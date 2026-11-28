@@ -7,34 +7,36 @@
   <meta name="description" content="A thought exercise: if youth sports club platforms trail other software, the trends elsewhere are a preview of what clubs will need next.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/" aria-current="page">Writing</a>
       <a href="/about/">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
+<main id="main">
 
     <article class="article essay">
-      <a class="back" href="/writing/">&larr; All writing</a>
-      <span class="label">Club software &middot; November 2026</span>
-      <h1>Reading Club Software’s Future From Outside the Club</h1>
+      <header>
+        <a class="back" href="/writing/">&larr; All writing</a>
+        <p class="article-meta">Club software &middot; November 2026 &middot; 11 min read</p>
+        <h1>Reading Club Software’s Future From Outside the Club</h1>
+        <p class="dek">If club platforms trail other software, the trends elsewhere are a preview. Five worth borrowing, and the foundation clubs would need to leapfrog.</p>
+        <div class="accent-rule" aria-hidden="true"></div>
+      </header>
 
       <p>At the Institute for Youth Sports Leaders conference in November, one observation kept coming up in hallway conversations: youth sports club platforms are behind. Not broken, and not bad. Just behind the software that other kinds of organizations use every day. I’d been thinking it for a while, and it was useful to hear club leaders say it out loud.</p>
 
@@ -228,24 +230,36 @@
         <li>Thoughtworks Technology Radar, <a href="https://www.thoughtworks.com/radar/techniques/semantic-layer" target="_blank" rel="noopener">Semantic layer</a></li>
       </ul>
 
-      <p><a class="back" href="/writing/">&larr; All writing</a></p>
+      <div class="author">
+        <img src="/images/dave.jpg" alt="" width="48" height="48">
+        <p><strong>Dave Criswell</strong> builds the systems behind operations and revenue, and spends his free time on the roads and trails near home.</p>
+      </div>
     </article>
+
+    <section class="container keep-reading" aria-labelledby="keep-heading">
+      <h2 class="eyebrow" id="keep-heading">Keep reading</h2>
+      <a href="/writing/a-dashboard-that-can-show-its-math.html"><span class="keep-title">A Dashboard That Can Show Its Math</span><span class="read">Read &rarr;</span></a>
+    </section>
+
 
   </main>
 
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
     </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </footer>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
 
-</div>
 </body>
 </html>

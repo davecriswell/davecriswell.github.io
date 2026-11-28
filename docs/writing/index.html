@@ -7,74 +7,69 @@
   <meta name="description" content="Essays by Dave Criswell on systems, operations, and practical AI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/" aria-current="page">Writing</a>
       <a href="/about/">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <header class="container page-head">
+    <h1 class="page-title">Writing</h1>
+    <p>Notes on systems, operations, and practical AI. Short pieces that show how I think through a problem.</p>
   </header>
 
-  <main id="main">
+  <section class="container page-section" aria-label="Essays">
+    <!-- Newest first. To add an essay, copy one <li> block and change the link, date, topic, title, and summary. -->
+    <ul class="post-list">
+      <li><a href="/writing/reading-club-softwares-future-from-outside-the-club.html">
+        <span class="post-when">November 2026<br>Club software</span>
+        <span class="post-body"><span class="post-title">Reading Club Software’s Future From Outside the Club</span><span class="post-summary">If club platforms trail other software, the trends elsewhere are a preview. Five worth borrowing, and the foundation clubs would need to leapfrog.</span><span class="read">Read &rarr;</span></span>
+      </a></li>
+      <li><a href="/writing/a-dashboard-that-can-show-its-math.html">
+        <span class="post-when">November 2026<br>Reporting</span>
+        <span class="post-body"><span class="post-title">A Dashboard That Can Show Its Math</span><span class="post-summary">A pacing dashboard that looked finished but couldn’t explain its numbers, and why the fix started with writing down what each number means.</span><span class="read">Read &rarr;</span></span>
+      </a></li>
+      <li><a href="/writing/the-club-platform-i-keep-sketching.html">
+        <span class="post-when">November 2026<br>Club software</span>
+        <span class="post-body"><span class="post-title">The Club Platform I Keep Sketching</span><span class="post-summary">Every workaround a club builds marks something its software doesn’t do. Lined up, they sketch the platform clubs actually need.</span><span class="read">Read &rarr;</span></span>
+      </a></li>
+    </ul>
+  </section>
 
-    <section class="page-intro">
-      <h1>Writing</h1>
-      <p class="section-note">Notes on systems, operations, and practical AI</p>
-      <!-- Newest first. To add an essay, copy one <li> block and change the link, label, title, and summary. -->
-      <ul class="post-list">
-        <li>
-          <a href="/writing/reading-club-softwares-future-from-outside-the-club.html">
-            <span class="label">Club software &middot; November 2026</span>
-            <span class="post-title">Reading Club Software’s Future From Outside the Club</span>
-            <span class="post-dek">If club platforms trail other software, the trends elsewhere are a preview. Five worth borrowing, and the foundation clubs would need to leapfrog.</span>
-          </a>
-        </li>
-        <li>
-          <a href="/writing/a-dashboard-that-can-show-its-math.html">
-            <span class="label">Reporting &middot; November 2026</span>
-            <span class="post-title">A Dashboard That Can Show Its Math</span>
-            <span class="post-dek">A pacing dashboard that looked finished but couldn’t explain its numbers, and why the fix started with writing down what each number means.</span>
-          </a>
-        </li>
-        <li>
-          <a href="/writing/the-club-platform-i-keep-sketching.html">
-            <span class="label">Club software &middot; November 2026</span>
-            <span class="post-title">The Club Platform I Keep Sketching</span>
-            <span class="post-dek">Every workaround a club builds marks something its software doesn’t do. Lined up, they sketch the platform clubs actually need.</span>
-          </a>
-        </li>
-      </ul>
-    </section>
+</main>
 
-  </main>
-
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
     </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </footer>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
 
-</div>
 </body>
 </html>

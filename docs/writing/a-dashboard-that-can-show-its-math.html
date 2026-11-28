@@ -7,34 +7,36 @@
   <meta name="description" content="Why I rebuilt a registration dashboard that looked finished but couldn&#x27;t explain its own numbers, and why the fix started with definitions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/" aria-current="page">Writing</a>
       <a href="/about/">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
+<main id="main">
 
     <article class="article essay">
-      <a class="back" href="/writing/">&larr; All writing</a>
-      <span class="label">Reporting &middot; November 2026</span>
-      <h1>A Dashboard That Can Show Its Math</h1>
+      <header>
+        <a class="back" href="/writing/">&larr; All writing</a>
+        <p class="article-meta">Reporting &middot; November 2026 &middot; 4 min read</p>
+        <h1>A Dashboard That Can Show Its Math</h1>
+        <p class="dek">A pacing dashboard that looked finished but couldn’t explain its numbers, and why the fix started with writing down what each number means.</p>
+        <div class="accent-rule" aria-hidden="true"></div>
+      </header>
 
       <p>Every season, a youth soccer club asks the same question in a dozen different ways: <em>are we ahead of last year or behind?</em> Registration doesn’t arrive evenly. It comes in waves around deadlines, tryouts, and the first warm weekend of spring. So “how many players do we have?” isn’t a useful number on its own. What you want is how many players you have compared with the same date last year, broken down by program, region, gender, and age group.</p>
 
@@ -78,24 +80,36 @@
 
       <p>Now I ask four questions before calling a report done: Have we written down what each number means? Can someone else change it? Does it tie back to the source? Can it explain any number it shows?</p>
 
-      <p><a class="back" href="/writing/">&larr; All writing</a></p>
+      <div class="author">
+        <img src="/images/dave.jpg" alt="" width="48" height="48">
+        <p><strong>Dave Criswell</strong> builds the systems behind operations and revenue, and spends his free time on the roads and trails near home.</p>
+      </div>
     </article>
+
+    <section class="container keep-reading" aria-labelledby="keep-heading">
+      <h2 class="eyebrow" id="keep-heading">Keep reading</h2>
+      <a href="/writing/the-club-platform-i-keep-sketching.html"><span class="keep-title">The Club Platform I Keep Sketching</span><span class="read">Read &rarr;</span></a>
+    </section>
+
 
   </main>
 
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
     </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </footer>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
 
-</div>
 </body>
 </html>
