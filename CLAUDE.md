@@ -20,20 +20,23 @@ GitHub Pages publishes only the `docs/` folder. Files outside it (like this one)
 | Essay: A Dashboard That Can Show Its Math | `docs/writing/a-dashboard-that-can-show-its-math.html` | |
 | Essay: Reading Club Software's Future From Outside the Club | `docs/writing/reading-club-softwares-future-from-outside-the-club.html` | |
 
-- `docs/style.css` holds every style. Colors, fonts, and status-badge colors are tokens at the top in `:root`.
+- `docs/style.css` holds every style. Colors and fonts are tokens at the top in `:root`; use only those tokens, never a new hex value.
 - Every page links styles and pages with root paths (`/style.css`, `/work/`), which work on github.io and on a custom domain.
-- **The header and footer are repeated on every page.** If you change one, change it on every page (eight pages, counting each essay).
+- **The header and the contact band plus footer are repeated on every page.** If you change one, change it on every page (eight pages, counting each essay).
 - The header is sticky: it stays pinned to the top while scrolling. `[id] { scroll-margin-top }` in `style.css` keeps anchor links from landing under it; if the header gets taller, raise that value.
 - The About photo is `docs/images/dave.jpg` (556 x 695, cropped so only Dave is in frame; shown at 280px wide on desktop, 220px on phones). To change it, replace that file and update the `width`/`height` on its `<img>` tag in `docs/about/index.html`.
 - **Every link to an outside site opens in a new tab:** add `target="_blank" rel="noopener"` to any `<a href="https://...">`. This covers LinkedIn (footer and About), sources cited in essays, and any new outside link. Links between pages of this site (`/work/`, `/writing/...`, `#contact`) and the `mailto:` email link open normally.
-- Menu: Work · Playbook & AI · Writing · About · Contact. Contact jumps to the footer (`#contact`) on the current page. On narrow phones the menu wraps to two lines; the phone `scroll-margin-top` allows for that.
+- Menu: wordmark "Dave Criswell." (period in accent) links Home, then Work · Playbook & AI · Writing · About · Say hello. Say hello jumps to the contact band (`#contact`) on the current page. The current page's link gets `aria-current="page"`. On phones the menu sits on its own line under the wordmark; the phone `scroll-margin-top` allows for that.
 - Each case study has an anchor so one example can be linked directly: `#data-foundation`, `#lead-funnel`, `#shift-imports`, `#game-reports`, `#pacing-dashboard`, `#trainingpeaks`, `#rafflecopter`.
 
 ## Page structure
-- **Home:** intro, Selected work, How I work.
-- **Work:** case studies, Select first, then earlier software work.
-- **Playbook & AI:** the Select Playbook and the Claude workspace behind it.
-- **About:** bio, Experience, Kind words, Outside work, closing quote.
+Every page ends with the dark contact band ("Say hello.", Email me and LinkedIn buttons) and the footer ("© 2026 Dave Criswell · Built with Claude Code").
+- **Home:** hero ("Hi, I'm Dave." with the hand-drawn underline), photo (placeholder until Dave supplies a running or riding photo), How I think (three numbered cards), A little about me, Selected work (four rows, no status), Writing (the two newest essays) beside the Now panel. No testimonial on Home. When a new essay is added, it replaces the older of the two on Home.
+- **Work:** H1 and intro, At Select Soccer Club (five case studies), Earlier, in software (two columns), Greg Goodson pull quote.
+- **Playbook & AI:** header, stat row (63 · 6 · 10 · 30+), four cards, Anatomy of a play beside the sample play, Plays that run as skills, How it stays current (five numbered cards), then The workspace behind it and Guardrails I build in as two grey panels.
+- **Writing:** H1 and intro, then the essay list (date and topic left, title, summary, Read →).
+- **Essay:** ← All writing, topic · month · read time, title, summary line (the same one as in the Writing list), short accent rule, body, author note, Keep reading (the next older essay; the oldest links back to the newest).
+- **About:** H1, lead, intro, photo; How I work (six principles, `#how-i-work`, linked from Home); Experience; Kind words; Outside work with the milestone stat row and closing quote.
 
 ## Positioning
 "I build the systems underneath revenue and operations: the CRM, the data, the automation, and the reporting that tells you what's actually working."
@@ -43,20 +46,21 @@ The site is a record of how Dave works and what he's learning: the systems he's 
 First person, plain-spoken, calm, and warm, with real empathy for the people who use the systems. No hype. **No em dashes.**
 
 ## Case study formats
-- **Select:** The problem / What I built / What it changes / Built to hold up / Tools, with a status badge beside the title.
+- **Select:** a summary row (title, one line, and "Status: **...**" as plain text on the right), then four cards (The problem / What I built / What it changes / Built to hold up, the last one dark), then Tools.
   - "Built to hold up" describes lasting design choices (safeguards, rules, structure), not progress, so it shouldn't need updating as projects change. Don't add progress or "where it stands" lines back.
 - **Software (TrainingPeaks, Rafflecopter):** The project (or approach) / What it took (or built) / The result. These results are verified.
-- **Status badges** (`<span class="badge" data-status="...">`). Only three, so they change only when a project moves to a new stage:
+- **Status** is plain text (`<p class="status">Status: <strong>Live</strong></p>`), not a colored badge. Only three, so they change only when a project moves to a new stage. Status shows on the Work page only, never on Home.
 
-| Badge | data-status | Meaning |
-| --- | --- | --- |
-| Live | `live` | In regular use |
-| Partly automated | `partial` | In use; some steps run on their own, the rest are still manual |
-| In development | `dev` | Still being built or tested |
+| Status | Meaning |
+| --- | --- |
+| Live | In regular use |
+| Partly automated | In use; some steps run on their own, the rest are still manual |
+| In development | Still being built or tested |
 
 ## Writing
 - Essays live in `docs/writing/`, one HTML file each, named from the title (`the-club-platform-i-keep-sketching.html`).
-- To add one: copy an existing essay page, replace the content inside `<article class="article essay">`, update the `<title>` and meta description, then add a `<li>` to the top of the list in `docs/writing/index.html` (newest first: label with topic and month, title, one-sentence summary).
+- To add one: copy an existing essay page, replace the content inside `<article class="article essay">` (keeping its `<header>` and author note), update the topic, date, read time (about 230 words a minute), title, summary line, `<title>`, and meta description. Then add a `<li>` to the top of the list in `docs/writing/index.html` (newest first), update the Writing section on Home, and fix the Keep reading links so they still run from newest to oldest.
+- Optional essay blocks are styled and ready: a definition callout (`<aside class="callout"><p class="callout-label">Definition</p><p>...</p></aside>`) and a pull line (`<blockquote class="pull-line">`). Quotes from other writers stay ordinary blockquotes.
 - Dates show month and year only ("November 2026"), on the essay page and in the Writing list. No exact days.
 - Essay titles capitalize every major word (title case). Case study titles on the Work page stay in sentence case.
 - Essays keep Dave's wording. Only fix what he asks for, plus em dashes (none allowed). A diagram from a private artifact gets redrawn on the page, since visitors can't open his artifacts.
@@ -64,9 +68,16 @@ First person, plain-spoken, calm, and warm, with real empathy for the people who
 - The foundation diagram in "Reading Club Software's Future From Outside the Club" is an inline SVG (`.leap` styles in `style.css`), redrawn from the diagram in Dave's draft. Its table uses `.essay-table`.
 
 ## Design
-Inspired by m3ka.com (warm off-white, serif headings, typewriter-style labels, thin rules) and chester.how (a large serif intro with key words highlighted). No playful toggles for now.
+"Field Notes" (November 2026; the handoff and approved mockups are in `design/field-notes/`, which isn't published). White page, near-black ink, one burnt-orange accent (`--accent` #c2410c), Space Grotesk headings over Inter body text, loaded from Google Fonts.
+- Personality comes from the voice first, then one signature accent: a hand-drawn SVG underline under one key word (Home: "Dave"). At most once per page, `aria-hidden`.
+- Content is 1120px wide with 24px side padding (16px on phones); essays are a 720px column at 19px.
+- Lists of items use a 2px ink top rule, then thin `--line` dividers. Cards have a 1px border and 16px corners; the emphasized card in a sequence is filled dark with orange numbering. Numbered steps read 01, 02, 03 with a → between cards on wide screens.
+- Small uppercase "eyebrow" labels (13px, bold) name sections. Grey `--surface` panels hold the Now panel, testimonials, and Playbook panels.
+- Interaction only when it's useful: links and anchors, no decorative animation or scroll effects. Not salesy: no service menus or hard-sell calls to action.
+- Every multi-column row wraps or stacks on phones; check at 390px, 768px, and 1280px.
 
 ## Open items
+- **Home photo:** Dave to supply a photo of himself running or riding on a road or trail. Replace the `.photo-placeholder` div in `docs/index.html` with an `<img>` (full width, 380px tall, 20px corners).
 - **Custom domain:** finish GitHub's Pages settings (step 3 below).
 - **Optional:** a short Avid4 Adventure or Bonusly case study to cover 2017 to 2023.
 
