@@ -7,99 +7,158 @@
   <meta name="description" content="Dave Criswell builds the systems underneath revenue and operations: the CRM, the data, the automation, and the reporting that tells you what&#x27;s actually working.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
 
-  <!-- Header: the same on every page. If you change it, change it on every page. -->
-  <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Dave Criswell</span>
-      <span class="brand-tag">Systems &middot; Operations &middot; Revenue</span>
-    </a>
+<!-- Header: the same on every page. If you change it, change it on every page. -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="/">Dave Criswell<span>.</span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="/work/">Work</a>
       <a href="/playbook/">Playbook &amp; AI</a>
       <a href="/writing/">Writing</a>
       <a href="/about/">About</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-hello" href="#contact">Say hello</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
+<main id="main">
 
-    <section class="intro">
-      <p>Hi, I’m <strong>Dave</strong>. I build the <strong>systems</strong> underneath revenue and operations: the <strong>CRM</strong>, the <strong>data</strong>, the <strong>automation</strong>, and the <strong>reporting</strong> that tells you what’s <em>actually</em> working.</p>
-      <p>Most of my career has been in <strong>software</strong>, running marketing, lifecycle, and <strong>revenue operations</strong>. For the last three years I’ve been building the <strong>operational backbone</strong> of Select Soccer Club, a growing youth soccer club with programs across Massachusetts and New Hampshire, and learning where <strong>AI</strong> genuinely earns its place in the work.</p>
-      <p>When I’m not working, I’m <strong>running</strong> or <strong>riding</strong> the roads and trails near home.</p>
-    </section>
+  <section class="container hero">
+    <div class="hero-main">
+      <h1>Hi, I’m <span class="underlined">Dave<svg aria-hidden="true" focusable="false" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 14 C 50 4, 120 3, 197 9" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>.</h1>
+      <p class="hero-sub">Systems builder. Former coach. Endurance athlete. Curious about how things work for the people who use them.</p>
+    </div>
+    <div class="hero-side">
+      <p>Most of my career has been in software marketing and operations. For the past three years I’ve built operations for a youth soccer club and figured out where AI actually helps.</p>
+      <p>Away from the desk, I’m usually running or riding the roads and trails near home.</p>
+    </div>
+  </section>
 
-    <section class="section" id="selected-work">
-      <div class="section-head">
-        <h2>Selected work</h2>
+  <!-- Photo placeholder. When the photo is ready, replace this div with an <img>. -->
+  <div class="container">
+    <div class="photo-placeholder">[ Photo: Dave running or riding on a road or trail ]</div>
+  </div>
+
+  <section class="container think" aria-labelledby="think-heading">
+    <h2 class="eyebrow" id="think-heading">How I think</h2>
+    <ol class="steps steps-3">
+      <li class="card">
+        <p class="num">01</p>
+        <h3>See the whole field.</h3>
+        <p>Systems first, then the tool. Every handoff and every person, before touching anything.</p>
+      </li>
+      <li class="card">
+        <p class="num">02</p>
+        <h3>Find where it breaks.</h3>
+        <p>Meet people where they already work, and show the math. Where they get stuck is the map.</p>
+      </li>
+      <li class="card card-dark">
+        <p class="num">03</p>
+        <h3>Build what gets used.</h3>
+        <p>Start small, then scale. Write it down so it holds up without me.</p>
+      </li>
+    </ol>
+    <a class="more" href="/about/#how-i-work">All six principles &rarr;</a>
+  </section>
+
+  <section class="container about-me" aria-labelledby="about-heading">
+    <h2 class="section-h2" id="about-heading">A little about me.</h2>
+    <div class="two-col">
+      <div>
+        <h3>How I show up</h3>
+        <p>I’m a calm presence, and I think first about the people on the other end of a system: the coach, the parent registering a kid, the director who needs one number they can trust.</p>
+        <p>About ten years of coaching soccer shaped the rest. Set people up to succeed, watch closely, adjust with patience. I still work that way.</p>
       </div>
-      <p class="lede">My favorite work starts with a messy, manual process and ends with a system people actually use. A few examples:</p>
-      <div class="cards">
-        <a class="card feature" href="/playbook/">
-          <span class="card-top"><span class="label">Featured</span></span>
-          <span class="card-title">The Select Playbook</span>
-          <span class="card-line">How Select’s operations got written down as 63 repeatable plays, ten of which run as AI skills.</span>
-          <span class="card-more">See the Playbook &rarr;</span>
-        </a>
-        <a class="card " href="/work/#data-foundation">
-          <span class="card-top"><span class="label">Select</span><span class="badge" data-status="partial">Partly automated</span></span>
-          <span class="card-title">A data foundation for a platform with no API</span>
-          <span class="card-line">Registration data unlocked into one source for reporting and internal tools.</span>
-          <span class="card-more">Read the case study &rarr;</span>
-        </a>
-        <a class="card " href="/work/#lead-funnel">
-          <span class="card-top"><span class="label">Select</span><span class="badge" data-status="partial">Partly automated</span></span>
-          <span class="card-title">A lead-to-enrollment funnel</span>
-          <span class="card-line">Every interested family gets a prompt response and a clear path to registering.</span>
-          <span class="card-more">Read the case study &rarr;</span>
-        </a>
-        <a class="card " href="/work/#trainingpeaks">
-          <span class="card-top"><span class="label">TrainingPeaks</span></span>
-          <span class="card-title">A 500,000-contact migration</span>
-          <span class="card-line">Tripled email-channel revenue in six months, against a twelve-month goal.</span>
-          <span class="card-more">Read the case study &rarr;</span>
-        </a>
+      <div>
+        <h3>What I like to work on</h3>
+        <p>Work that starts as a messy manual process and ends as a system people actually use. And I’ll always tell you exactly where it stands.</p>
+        <a class="more" href="#selected-work">Selected work &darr;</a>
       </div>
-      <p class="more-link"><a href="/work/">All work &rarr;</a></p>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="how-i-work">
-      <div class="section-head">
-        <h2>How I work</h2>
-      </div>
-      <ul class="principles">
-        <li><h3>Systems first, then the tool</h3><p>Understand how the work actually flows and who owns what, then choose software that fits. Not the other way around.</p></li>
-        <li><h3>Meet people where they already work</h3><p>Put the form in the app coaches already open. Adoption is the real test of a system, and the hardest one to pass.</p></li>
-        <li><h3>Show the math</h3><p>If a number can’t be traced back to its source, it isn’t ready to make decisions with.</p></li>
-        <li><h3>Start small, then scale</h3><p>Ship a manual fallback now, pilot with one team or region, learn what breaks, and earn the right to roll it out.</p></li>
-        <li><h3>Be honest about status</h3><p>“Automated through step four, manual after that” tells you more than “fully automated.” And sometimes step four is exactly the right place to stop.</p></li>
-        <li><h3>Write it down</h3><p>A process that lives in one person’s head isn’t a system yet.</p></li>
+  <section class="container selected" id="selected-work" aria-labelledby="selected-heading">
+    <div class="section-top">
+      <h2 class="eyebrow" id="selected-heading">Selected work</h2>
+      <a class="more" href="/work/">All work &rarr;</a>
+    </div>
+    <ul class="rows">
+      <li><a href="/playbook/">
+        <span class="row-org">Select</span>
+        <span class="row-text"><span class="row-title">The Select Playbook</span><span class="row-line">Club operations documented as 63 repeatable plays. Ten run as AI skills.</span></span>
+      </a></li>
+      <li><a href="/work/#data-foundation">
+        <span class="row-org">Select</span>
+        <span class="row-text"><span class="row-title">A data foundation for a platform with no API</span><span class="row-line">One trusted source of registration data for reports and internal tools.</span></span>
+      </a></li>
+      <li><a href="/work/#lead-funnel">
+        <span class="row-org">Select</span>
+        <span class="row-text"><span class="row-title">A lead-to-enrollment funnel</span><span class="row-line">Every interested family gets a quick response and a clear path to registering.</span></span>
+      </a></li>
+      <li><a href="/work/#trainingpeaks">
+        <span class="row-org">TrainingPeaks</span>
+        <span class="row-text"><span class="row-title">A 500,000-contact migration</span><span class="row-line">Email revenue tripled in six months, against a twelve-month goal.</span></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <div class="container writing-now">
+    <section class="home-writing" aria-labelledby="writing-heading">
+      <h2 class="eyebrow" id="writing-heading">Writing</h2>
+      <!-- The two newest essays. When you add an essay, put it first and drop the last one. -->
+      <ul class="post-mini">
+        <li><a href="/writing/reading-club-softwares-future-from-outside-the-club.html">
+          <p class="post-meta">Club software &middot; November 2026</p>
+          <h3>Reading Club Software’s Future From Outside the Club</h3>
+          <p class="post-summary">If club platforms trail other software, the trends elsewhere are a preview. Five worth borrowing, and the foundation clubs would need to leapfrog.</p>
+        </a></li>
+        <li><a href="/writing/a-dashboard-that-can-show-its-math.html">
+          <p class="post-meta">Reporting &middot; November 2026</p>
+          <h3>A Dashboard That Can Show Its Math</h3>
+          <p class="post-summary">A pacing dashboard that looked finished but couldn’t explain its numbers, and why the fix started with writing down what each number means.</p>
+        </a></li>
       </ul>
+      <a class="more" href="/writing/">All writing &rarr;</a>
     </section>
 
-  </main>
+    <section class="now" aria-labelledby="now-heading">
+      <div class="now-head">
+        <h2 id="now-heading">Now</h2>
+        <span class="now-date">Updated November 2026</span>
+      </div>
+      <ul>
+        <li>Exploring where practical AI helps youth sports clubs, and where it’s hype</li>
+        <li>Writing about club software and where it’s headed</li>
+        <li>Running and riding the roads and trails near home</li>
+      </ul>
+      <p class="now-note"><strong>1.95 Ironman triathlons.</strong> I learned the most from the 0.05 I didn’t finish.</p>
+    </section>
+  </div>
 
-  <!-- Footer: the same on every page. If you change it, change it on every page. -->
-  <footer class="site-footer" id="contact">
-    <p class="contact-line">I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
-    <div class="contact-links">
-      <a href="mailto:davecriswell@gmail.com">davecriswell@gmail.com</a>
-      <a href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-    <div class="fine-print">
-      <span>&copy; 2026 Dave Criswell</span>
-      <span>Built with Claude Code</span>
-    </div>
-  </footer>
+</main>
 
-</div>
+<!-- Contact band and footer: the same on every page. If you change it, change it on every page. -->
+<footer class="site-footer" id="contact">
+  <div class="container contact-band">
+    <div>
+      <h2>Say <span>hello.</span></h2>
+      <p>I’m always happy to talk systems, operations, practical AI, or youth sports.</p>
+    </div>
+    <div class="buttons">
+      <a class="button button-primary" href="mailto:davecriswell@gmail.com">Email me</a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/davecriswell/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="container fine-print">
+    <p>&copy; 2026 Dave Criswell &middot; Built with Claude Code</p>
+  </div>
+</footer>
+
 </body>
 </html>
